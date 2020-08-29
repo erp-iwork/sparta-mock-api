@@ -1,0 +1,5 @@
+title: FixedAsset
+type: object
+properties:
+  id:
+    type: string

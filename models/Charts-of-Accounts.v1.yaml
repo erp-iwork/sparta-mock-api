@@ -1,0 +1,8 @@
+title: Charts of Accounts
+type: object
+properties:
+  id:
+    type: string
+x-tags:
+  - COA
+description: ''

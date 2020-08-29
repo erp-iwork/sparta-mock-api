@@ -1,0 +1,7 @@
+title: General Journals
+type: object
+x-tags:
+  - General Journals
+properties:
+  id:
+    type: string

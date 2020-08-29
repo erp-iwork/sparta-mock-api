@@ -1,0 +1,7 @@
+title: Fiscal Year
+type: object
+properties:
+  id:
+    type: string
+x-tags:
+  - Fiscal Year

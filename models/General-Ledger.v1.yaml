@@ -1,0 +1,7 @@
+title: General Ledger
+type: object
+x-tags:
+  - General Ledger
+properties:
+  id:
+    type: string

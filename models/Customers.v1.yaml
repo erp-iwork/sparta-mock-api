@@ -1,0 +1,7 @@
+title: Customers
+type: object
+properties:
+  id:
+    type: string
+x-tags:
+  - Customers

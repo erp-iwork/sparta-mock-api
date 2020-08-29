@@ -1,22 +1,19 @@
-title: Fiscal Year
+title: Period
 type: object
 x-tags:
-  - Fiscal Year
+  - Period
 properties:
   id:
     type: integer
-  year:
+  name:
     type: string
-    format: date
-  ref:
-    type: string
+  fiscal_year:
+    $ref: ./Fiscal-Year.v1.yaml
   start_date:
     type: string
     format: date-time
   end_date:
     type: string
     format: date-time
-  period:
-    type: array
-    items:
-      $ref: ./Period.v1.yaml
+  ref:
+    type: string

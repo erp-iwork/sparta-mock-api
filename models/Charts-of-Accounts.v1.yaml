@@ -1,8 +1,32 @@
 title: Charts of Accounts
 type: object
-properties:
-  id:
-    type: string
 x-tags:
   - COA
 description: ''
+properties:
+  id:
+    type: integer
+  account_number:
+    type: string
+  name:
+    type: string
+  balance:
+    type: number
+  normal_balance:
+    type: number
+  account_group:
+    type: array
+    items:
+      type: string
+  financial_statements:
+    type: array
+    items:
+      type: string
+  bs_subgroups:
+    type: array
+    items:
+      type: string
+  sub_ledger:
+    type: array
+    items:
+      type: string

@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Period
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /periods:
+    get:
+      summary: Fetches periods
+      tags:
+        - Period
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Period.v1.yaml
+      operationId: get-periods
+      description: Fetch existing periods
+  '/periods/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    put:
+      summary: Edit Periods
+      tags:
+        - Period
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Period.v1.yaml
+      operationId: put-periods-id
+      description: Update period
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Period.v1.yaml
+    delete:
+      summary: Remoce Periods
+      tags:
+        - Period
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Period.v1.yaml
+      operationId: delete-periods-id
+      description: Remove period
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Period.v1.yaml
+components:
+  schemas: {}

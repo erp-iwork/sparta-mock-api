@@ -2,17 +2,24 @@ title: Vendor
 type: object
 properties:
   id:
-    type: string
+    type: integer
   code:
     type: string
   name:
     type: string
+    minLength: 5
+    maxLength: 7
   tag:
     type: string
   tin_number:
-    type: string
+    type: integer
+    minimum: 111111111
+    maximum: 999999999
   type_of_customer:
     type: string
+    enum:
+      - Local
+      - Forign
   contact:
     $ref: ./Contact.v1.yaml
   created_at:

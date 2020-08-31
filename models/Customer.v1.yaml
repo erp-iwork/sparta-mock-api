@@ -4,22 +4,28 @@ x-tags:
   - Customers
 properties:
   id:
-    type: string
+    type: integer
   code:
     type: string
   name:
     type: string
+    minLength: 5
+    maxLength: 10
   tag:
     type: string
   payment_term:
     type: string
+    enum:
+      - 15 days
+      - 20 days
+      - 30 days
   type:
     type: string
     enum:
       - Local
       - Foreign
   tin_number:
-    type: string
+    type: integer
   contact:
     $ref: ./Contact.v1.yaml
   created_at:

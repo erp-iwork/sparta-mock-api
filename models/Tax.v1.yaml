@@ -1,0 +1,17 @@
+title: Tax
+type: object
+x-tags:
+  - Tax
+properties:
+  id:
+    type: integer
+  type:
+    type: string
+  amount:
+    type: number
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

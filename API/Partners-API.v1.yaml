@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Partners API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /parnters:
+    get:
+      summary: Gets all partners
+      tags:
+        - Add Partner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Partner.v1.yaml
+      operationId: get-parnters
+      description: Get all partners
+    post:
+      summary: Create partners
+      tags:
+        - Add Partner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Partner.v1.yaml
+      operationId: post-parnters
+      description: Create Partner
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Partner.v1.yaml
+  '/partners/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get single partner
+      tags:
+        - Add Partner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Partner.v1.yaml
+      operationId: get-partners-id
+      description: Fetches single partner
+    put:
+      summary: Update partner
+      tags:
+        - Add Partner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Partner.v1.yaml
+      operationId: put-partners-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Partner.v1.yaml
+      description: Updates single partner
+    delete:
+      summary: Remove partner
+      tags:
+        - Add Partner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Partner.v1.yaml
+      operationId: delete-partners-id
+      description: Removes parnter
+components:
+  schemas: {}

@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Account Recivables API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /account_recivables:
+    get:
+      summary: Get Account Recivables
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/AccountReceivable.v1.yaml
+      operationId: get-account_recivables
+    post:
+      summary: Get Account Recivable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountReceivable.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-account_recivables
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/AccountReceivable.v1.yaml
+  '/account_recivables/{accountRecivableId}':
+    parameters:
+      - schema:
+          type: string
+        name: accountRecivableId
+        in: path
+        required: true
+    get:
+      summary: Get Account Recivable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountReceivable.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-account_recivables-accountRecivableId
+    put:
+      summary: Update Account Recivable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountReceivable.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-account_recivables-accountRecivableId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/AccountReceivable.v1.yaml
+    delete:
+      summary: Remove Account Recivable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountReceivable.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-account_recivables-accountRecivableId
+components:
+  schemas: {}

@@ -6,39 +6,25 @@ description: ''
 properties:
   id:
     type: integer
-  customer:
+  type:
     type: string
-  type_of_vender:
-    type: string
+    enum:
+      - Local
+      - Foreign
   payment_term:
     type: string
-  customer_name:
+    enum:
+      - 5 Days
+      - 15 Days
+      - End of the month
+      - '30% advance end of 30 days'
+  name:
     type: string
   account_code:
-    type: number
+    type: string
   id_tag:
     type: string
   tin_number:
     type: number
-  country:
-    type: string
-  city:
-    type: string
-  website:
-    type: string
-    format: hostname
-  phoneNumber:
-    type: number
-  mobileNumber:
-    type: number
-  email:
-    type: string
-    format: email
-  tax_type:
-    type: string
-  type_of_customer:
-    type: string
-  vat:
-    type: number
-  is_customer:
-    type: boolean
+  contact:
+    $ref: ./Contact.v1.yaml

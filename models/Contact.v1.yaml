@@ -9,7 +9,13 @@ properties:
     type: string
   phone_number:
     type: string
+    pattern: "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$"
   mobile_number:
     type: string
+    pattern: "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$"
   email:
     type: string
+    format: email
+    example: test@gmail.com
+required:
+  - id

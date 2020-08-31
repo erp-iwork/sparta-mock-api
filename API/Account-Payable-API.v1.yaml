@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Account Payable API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /account_payables:
+    get:
+      summary: Get Account Payables
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/AccountPayable.v1.yaml
+      operationId: get-account_payables
+    post:
+      summary: Create Account Payable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountPayable.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-account_payables
+  '/account_payables/{accountPayableId}':
+    parameters:
+      - schema:
+          type: string
+        name: accountPayableId
+        in: path
+        required: true
+    delete:
+      summary: Remove account payable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountPayable.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-account_payables-accountPayableId
+    get:
+      summary: Get account payable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountPayable.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountPayable.v1.yaml
+      operationId: get-account_payables-accountPayableId
+    put:
+      summary: Update account payable
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/AccountPayable.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-account_payables-accountPayableId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/AccountPayable.v1.yaml
+components:
+  schemas: {}

@@ -13,11 +13,12 @@ properties:
     type: string
   payment_term:
     type: string
-  vendor_type:
+  type:
     type: string
+    enum:
+      - Local
+      - Foreign
   tin_number:
-    type: string
-  phone_number:
     type: string
   contact:
     $ref: ./Contact.v1.yaml

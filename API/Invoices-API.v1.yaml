@@ -1,15 +1,14 @@
 openapi: 3.0.0
 info:
-  title: Add Partner
+  title: Invoices API
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /parnters:
+  /invoices:
     get:
-      summary: Gets all partners
-      tags:
-        - Add Partner
+      summary: Get Invoices
+      tags: []
       responses:
         '200':
           description: OK
@@ -18,77 +17,79 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/Partner.v1.yaml
-      operationId: get-parnters
-      description: Get all partners
+                  $ref: ../models/Invoice.v1.yaml
+      operationId: get-invoice
     post:
-      summary: Create partners
-      tags:
-        - Add Partner
+      summary: Create Invoice
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/Partner.v1.yaml
-      operationId: post-parnters
-      description: Create customer
+                $ref: ../models/Invoice.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-invoice
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/Partner.v1.yaml
-  '/partners/{id}':
+              $ref: ../models/Invoice.v1.yaml
+    parameters: []
+  '/invoices/{invoiceId}':
     parameters:
       - schema:
           type: string
-        name: id
+        name: invoiceId
         in: path
         required: true
     get:
-      summary: Get single partner
-      tags:
-        - Add Partner
+      summary: Get Invoice
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/Partner.v1.yaml
-      operationId: get-partners-id
-      description: Fetches single partner
+                $ref: ../models/Invoice.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-invoice-invoiceId
     put:
-      summary: Update partner
-      tags:
-        - Add Partner
+      summary: Update Inovice
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/Partner.v1.yaml
-      operationId: put-partners-id
+                $ref: ../models/Invoice.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-invoice-invoiceId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/Partner.v1.yaml
-      description: Updates single partner
+              $ref: ../models/Invoice.v1.yaml
     delete:
-      summary: Remove partner
-      tags:
-        - Add Partner
+      summary: Remoce Invoice
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/Partner.v1.yaml
-      operationId: delete-partners-id
-      description: Removes parnter
+                $ref: ../models/Invoice.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-invoice-invoiceId
 components:
   schemas: {}

@@ -12,9 +12,9 @@ properties:
   journal:
     $ref: ./General-Journal.v1.yaml
   asset_account:
-    type: string
+    $ref: ./Charts-of-Accounts.v1.yaml
   department_account:
-    type: number
+    $ref: ./Charts-of-Accounts.v1.yaml
   number_of_department:
     type: number
     minimum: 0

@@ -7,8 +7,6 @@ properties:
     type: string
   category:
     $ref: ./FixedAssetCategory.v1.yaml
-  asset_account:
-    type: string
   serial_number:
     type: number
   reference:

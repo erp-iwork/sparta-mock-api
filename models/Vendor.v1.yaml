@@ -13,10 +13,6 @@ properties:
     type: string
   type_of_customer:
     type: string
-  country:
-    type: string
-  phone_number:
-    type: string
   contact:
     $ref: ./Contact.v1.yaml
   created_at:

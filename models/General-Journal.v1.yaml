@@ -1,0 +1,33 @@
+title: General Journals
+type: object
+x-tags:
+  - General Journals
+properties:
+  id:
+    type: number
+  name:
+    type: string
+  type:
+    type: string
+  journal_items:
+    type: object
+    properties:
+      name:
+        type: string
+      type:
+        type: string
+      ref:
+        type: string
+      posted_date:
+        type: string
+        format: date
+      debit_account:
+        type: string
+      credit_account:
+        type: string
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

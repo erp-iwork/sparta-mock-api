@@ -1,7 +1,17 @@
 title: Trial Balance
 type: object
-properties:
-  id:
-    type: string
 x-tags:
   - Trial Balance
+properties:
+  id:
+    type: integer
+  code:
+    type: string
+  account_name:
+    type: string
+  debit:
+    type: number
+  credit:
+    type: number
+  balance:
+    type: number

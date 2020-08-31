@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: General Journal
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /general-journals:
+    get:
+      summary: Gets all the general jounrals
+      tags:
+        - General Journals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/General-Journal.v1.yaml
+      operationId: get-general-journals
+      description: Get all jounrals
+    post:
+      summary: Create a journal
+      tags:
+        - General Journals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/General-Journal.v1.yaml
+      operationId: post-general-journals
+      description: Create journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/General-Journal.v1.yaml
+  '/general-journals/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get single journal
+      tags:
+        - General Journals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/General-Journal.v1.yaml
+      operationId: get-general-journals-id
+      description: Get single journal
+    put:
+      summary: Update journal
+      tags:
+        - General Journals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/General-Journal.v1.yaml
+      operationId: put-general-journals-id
+      description: Update journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/General-Journal.v1.yaml
+    delete:
+      summary: Remove journal
+      tags:
+        - General Journals
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/General-Journal.v1.yaml
+      operationId: delete-general-journals-id
+      description: Remove journal
+components:
+  schemas: {}

@@ -30,3 +30,15 @@ properties:
     type: array
     items:
       type: string
+  financial_status:
+    type: boolean
+  debit_amount:
+    type: number
+  credit_amount:
+    type: number
+  account_balance:
+    type: number
+  unit_of_currency:
+    type: string
+  account_type:
+    type: string

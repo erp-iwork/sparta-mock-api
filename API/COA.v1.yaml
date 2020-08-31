@@ -1,0 +1,99 @@
+openapi: 3.0.0
+info:
+  title: COA
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /accounts:
+    get:
+      summary: Get all accounts
+      tags:
+        - COA
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Charts-of-Accounts.v1.yaml
+      operationId: get-accounts
+      description: Fetchs all accounts
+    post:
+      summary: Create an account
+      tags:
+        - COA
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Charts-of-Accounts.v1.yaml
+      operationId: post-accounts
+      description: Create an account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Charts-of-Accounts.v1.yaml
+  '/accounts/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get a single account
+      tags:
+        - COA
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Charts-of-Accounts.v1.yaml
+      operationId: get-accounts-id
+      description: Fetch a single account
+    put:
+      summary: Update account
+      tags:
+        - COA
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Charts-of-Accounts.v1.yaml
+      operationId: put-accounts-id
+      description: Update account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Charts-of-Accounts.v1.yaml
+    delete:
+      summary: Remove account
+      tags:
+        - COA
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Charts-of-Accounts.v1.yaml
+      operationId: delete-accounts-id
+      description: Delete account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Charts-of-Accounts.v1.yaml
+components:
+  schemas: {}

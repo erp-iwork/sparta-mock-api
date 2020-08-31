@@ -1,0 +1,25 @@
+title: VendorBalanceSummary
+type: object
+properties:
+  id:
+    type: string
+  vendor:
+    $ref: ./Vendor.v1.yaml
+  amount:
+    type: string
+  number_of_order:
+    type: number
+    minimum: 0
+    maximum: 20
+  bebit_last_month:
+    type: string
+    format: date
+  days_overdue:
+    type: string
+    format: date
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

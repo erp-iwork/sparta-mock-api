@@ -3,3 +3,27 @@ type: object
 properties:
   id:
     type: string
+  name:
+    type: string
+  reference:
+    type:
+      - string
+      - number
+  journal:
+    $ref: ./General-Journal.v1.yaml
+  asset_account:
+    type: string
+  department_account:
+    type: number
+  number_of_department:
+    type: number
+    minimum: 0
+    maximum: 20
+  period_length:
+    type: string
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

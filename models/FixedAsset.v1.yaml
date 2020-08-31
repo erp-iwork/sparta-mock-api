@@ -3,3 +3,26 @@ type: object
 properties:
   id:
     type: string
+  name:
+    type: string
+  category:
+    $ref: ./FixedAssetCategory.v1.yaml
+  asset_account:
+    type: string
+  serial_number:
+    type: number
+  reference:
+    type:
+      - string
+      - number
+  location:
+    type: string
+  purchase_date:
+    type: string
+    format: date
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

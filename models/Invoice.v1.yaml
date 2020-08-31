@@ -3,3 +3,15 @@ type: object
 properties:
   id:
     type: string
+  customer:
+    $ref: ./Customer.v1.yaml
+  date:
+    type: string
+    format: date-time
+  currency:
+    type: string
+    enum:
+      - ETB
+      - USD
+  invoice_line:
+    $ref: ./InvoiceLine.v1.yaml

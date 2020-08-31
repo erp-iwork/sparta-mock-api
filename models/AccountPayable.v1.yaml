@@ -3,3 +3,9 @@ type: object
 properties:
   id:
     type: string
+  vendor_balance_summary:
+    $ref: ./VendorBalanceSummary.v1.yaml
+  orders_awaiting_payment:
+    $ref: ./OrderAwaitingPayment.v1.yaml
+  supplies_awaiting_payment:
+    $ref: ./SuppliesAwaitingPayment.v1.yaml

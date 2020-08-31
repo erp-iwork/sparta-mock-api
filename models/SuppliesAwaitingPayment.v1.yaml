@@ -1,0 +1,16 @@
+title: SuppliesAwaitingPayment
+type: object
+properties:
+  id:
+    type: string
+  vendor:
+    $ref: ./Vendor.v1.yaml
+  invoice_number:
+    type: number
+    minimum: 0
+  amount:
+    type: number
+    format: double
+  invoice_date:
+    type: string
+    format: date-time

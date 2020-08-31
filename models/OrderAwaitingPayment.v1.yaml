@@ -1,0 +1,20 @@
+title: OrderAwaitingPayment
+type: object
+properties:
+  id:
+    type: string
+  po_number:
+    type: number
+  vendor:
+    $ref: ./Vendor.v1.yaml
+  "ordered_item\t":
+    type: string
+  invoice_date:
+    type: string
+    format: date-time
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

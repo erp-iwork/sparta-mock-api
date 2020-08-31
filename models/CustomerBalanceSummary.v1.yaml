@@ -1,0 +1,27 @@
+title: CustomerBalanceSummary
+type: object
+properties:
+  id:
+    type: string
+  vendor:
+    $ref: ./Customer.v1.yaml
+  amount:
+    type: number
+    format: double
+    minimum: 0
+  number_of_order:
+    type: number
+    minimum: 0
+    maximum: 20
+  bebit_last_month:
+    type: string
+    format: date
+  days_overdue:
+    type: string
+    format: date
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

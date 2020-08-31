@@ -1,0 +1,99 @@
+openapi: 3.0.0
+info:
+  title: Vendors API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /vendors:
+    get:
+      summary: Get Vendors
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Vendor.v1.yaml
+      operationId: get-vendors
+    post:
+      summary: Create Vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Vendor.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-vendors
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Vendor.v1.yaml
+  '/vendors/{vendorId}':
+    parameters:
+      - schema:
+          type: string
+        name: vendorId
+        in: path
+        required: true
+    get:
+      summary: Get vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Vendor.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: get-vendors-vendorId
+    put:
+      summary: update vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Vendor.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-vendors-vendorId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Vendor.v1.yaml
+    delete:
+      summary: remove vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Vendor.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-vendors-vendorId
+components:
+  schemas: {}

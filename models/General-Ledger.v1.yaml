@@ -4,4 +4,28 @@ x-tags:
   - General Ledger
 properties:
   id:
+    type: integer
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time
+  account_number:
+    type: number
+  transaction_description:
+    type: string
+  debit:
+    type: number
+  credit:
+    type: number
+  balance:
+    type: number
+  account_name:
+    type: string
+  voucher_number:
+    type: number
+  ref:
+    type: string
+  sub_ledger:
     type: string

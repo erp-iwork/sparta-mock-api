@@ -1,0 +1,44 @@
+title: Add Partner
+type: object
+x-tags:
+  - Add Partner
+description: ''
+properties:
+  id:
+    type: integer
+  customer:
+    type: string
+  type_of_vender:
+    type: string
+  payment_term:
+    type: string
+  customer_name:
+    type: string
+  account_code:
+    type: number
+  id_tag:
+    type: string
+  tin_number:
+    type: number
+  country:
+    type: string
+  city:
+    type: string
+  website:
+    type: string
+    format: hostname
+  phoneNumber:
+    type: number
+  mobileNumber:
+    type: number
+  email:
+    type: string
+    format: email
+  tax_type:
+    type: string
+  type_of_customer:
+    type: string
+  vat:
+    type: number
+  is_customer:
+    type: boolean

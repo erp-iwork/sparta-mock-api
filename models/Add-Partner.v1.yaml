@@ -1,8 +1,0 @@
-title: Add Partner
-type: object
-properties:
-  id:
-    type: string
-x-tags:
-  - Add Partner
-description: ''

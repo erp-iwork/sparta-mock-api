@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Tax
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /taxes:
+    get:
+      summary: Fetches all the taxes
+      tags:
+        - Tax
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/Tax.v1.yaml
+      operationId: get-taxes
+      description: Get all tax types
+    post:
+      summary: Create Tax
+      tags:
+        - Tax
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Tax.v1.yaml
+      operationId: post-taxes
+      description: Create tax
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Tax.v1.yaml
+components:
+  schemas: {}

@@ -32,6 +32,11 @@ paths:
         '400':
           description: Bad Request
       operationId: post-account_payables
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/AccountPayable.v1.yaml
   '/account_payables/{accountPayableId}':
     parameters:
       - schema:

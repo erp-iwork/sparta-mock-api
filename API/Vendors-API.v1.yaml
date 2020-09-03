@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: Account Payable API
+  title: Vendors API
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /account_payables:
+  /vendors:
     get:
-      summary: Get Account Payables
+      summary: Get Vendors
       tags: []
       responses:
         '200':
@@ -17,10 +17,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/AccountPayable.v1.yaml
-      operationId: get-account_payables
+                  $ref: ../models/Vendor.v1.yaml
+      operationId: get-vendors
     post:
-      summary: Create Account Payable
+      summary: Create Vendor
       tags: []
       responses:
         '200':
@@ -28,37 +28,24 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Vendor.v1.yaml
         '400':
           description: Bad Request
-      operationId: post-account_payables
+      operationId: post-vendors
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/AccountPayable.v1.yaml
-  '/account_payables/{accountPayableId}':
+              $ref: ../models/Vendor.v1.yaml
+  '/vendors/{vendorId}':
     parameters:
       - schema:
           type: string
-        name: accountPayableId
+        name: vendorId
         in: path
         required: true
-    delete:
-      summary: Remove account payable
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/AccountPayable.v1.yaml
-        '404':
-          description: Not Found
-      operationId: delete-account_payables-accountPayableId
     get:
-      summary: Get account payable
+      summary: Get vendor
       tags: []
       responses:
         '200':
@@ -66,16 +53,17 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Vendor.v1.yaml
         '404':
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
-      operationId: get-account_payables-accountPayableId
+                type: object
+                properties: {}
+      operationId: get-vendors-vendorId
     put:
-      summary: Update account payable
+      summary: update vendor
       tags: []
       responses:
         '200':
@@ -83,16 +71,29 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Vendor.v1.yaml
         '400':
           description: Bad Request
         '404':
           description: Not Found
-      operationId: put-account_payables-accountPayableId
+      operationId: put-vendors-vendorId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/AccountPayable.v1.yaml
+              $ref: ../models/Vendor.v1.yaml
+    delete:
+      summary: remove vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Vendor.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-vendors-vendorId
 components:
   schemas: {}

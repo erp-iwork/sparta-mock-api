@@ -1,4 +1,4 @@
-title: Add Partner
+title: Partner
 type: object
 x-tags:
   - Add Partner
@@ -28,3 +28,5 @@ properties:
     type: number
   contact:
     $ref: ./Contact.v1.yaml
+required:
+  - id

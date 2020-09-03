@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: Account Payable API
+  title: Customer API
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /account_payables:
+  /customers:
     get:
-      summary: Get Account Payables
+      summary: Get customers
       tags: []
       responses:
         '200':
@@ -17,10 +17,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/AccountPayable.v1.yaml
-      operationId: get-account_payables
+                  $ref: ../models/Customer.v1.yaml
+      operationId: get-customers
     post:
-      summary: Create Account Payable
+      summary: Create customer
       tags: []
       responses:
         '200':
@@ -28,37 +28,28 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Customer.v1.yaml
         '400':
           description: Bad Request
-      operationId: post-account_payables
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Customer.v1.yaml
+      operationId: post-customers
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/AccountPayable.v1.yaml
-  '/account_payables/{accountPayableId}':
+              $ref: ../models/Customer.v1.yaml
+  '/customers/{customerId}':
     parameters:
       - schema:
           type: string
-        name: accountPayableId
+        name: customerId
         in: path
         required: true
-    delete:
-      summary: Remove account payable
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/AccountPayable.v1.yaml
-        '404':
-          description: Not Found
-      operationId: delete-account_payables-accountPayableId
     get:
-      summary: Get account payable
+      summary: Get customer
       tags: []
       responses:
         '200':
@@ -66,16 +57,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Customer.v1.yaml
         '404':
           description: Not Found
-          content:
-            application/json:
-              schema:
-                $ref: ../models/AccountPayable.v1.yaml
-      operationId: get-account_payables-accountPayableId
+      operationId: get-customers-customerId
     put:
-      summary: Update account payable
+      summary: Update customer
       tags: []
       responses:
         '200':
@@ -83,16 +70,33 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/AccountPayable.v1.yaml
+                $ref: ../models/Customer.v1.yaml
         '400':
           description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Customer.v1.yaml
         '404':
           description: Not Found
-      operationId: put-account_payables-accountPayableId
+      operationId: put-customers-customerId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/AccountPayable.v1.yaml
+              $ref: ../models/Customer.v1.yaml
+    delete:
+      summary: Remove customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Customer.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-customers-customerId
 components:
   schemas: {}

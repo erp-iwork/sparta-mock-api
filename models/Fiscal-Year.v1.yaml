@@ -16,7 +16,5 @@ properties:
   end_date:
     type: string
     format: date-time
-  period:
-    type: array
-    items:
-      $ref: ./Period.v1.yaml
+  numberOfPeriods:
+    type: integer

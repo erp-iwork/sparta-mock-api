@@ -17,3 +17,5 @@ properties:
     format: date-time
   ref:
     type: string
+  status:
+    type: string

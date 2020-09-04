@@ -15,3 +15,9 @@ properties:
     type: number
   balance:
     type: number
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

@@ -31,3 +31,6 @@ properties:
   updated_at:
     type: string
     format: date-time
+  posted_date:
+    type: string
+    format: date

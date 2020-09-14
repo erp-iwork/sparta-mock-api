@@ -5,20 +5,27 @@ x-tags:
 properties:
   id:
     type: integer
-  code:
+  account_code:
     type: string
+    enum:
+      - Account code -1
+      - Account code -2
+      - Account code -3
+      - Account code -4
+      - Account code -5
   name:
     type: string
     minLength: 5
     maxLength: 10
-  tag:
+  id_tag:
     type: string
   payment_term:
     type: string
     enum:
-      - 15 days
-      - 20 days
-      - 30 days
+      - 5 Days
+      - 15 Days
+      - End of the Month
+      - '30% Advance End of 30 Days'
   type:
     type: string
     enum:

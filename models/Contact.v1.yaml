@@ -1,21 +1,21 @@
 title: Contact
 type: object
+description: ''
 properties:
   id:
-    type: string
+    type: integer
   country:
     type: string
   city:
     type: string
+    default: addis ababa
   phone_number:
     type: string
-    pattern: "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$"
   mobile_number:
     type: string
-    pattern: "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$"
   email:
     type: string
     format: email
-    example: test@gmail.com
-required:
-  - id
+  website:
+    type: string
+    format: uri

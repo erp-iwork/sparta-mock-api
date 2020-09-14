@@ -28,5 +28,16 @@ properties:
     type: number
   contact:
     $ref: ./Contact.v1.yaml
-required:
-  - id
+  isCustomer:
+    type: boolean
+  tax_type:
+    type: string
+    enum:
+      - TOT
+      - VAT
+  vat:
+    type: string
+    enum:
+      - 'withholding 35% rated purchases'
+      - 'withholding 2% rated purchases'
+      - 'VAT 15%'

@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Fixed Asset API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /fixed-assets:
+    get:
+      summary: Get Fixed Assets
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/FixedAsset.v1.yaml
+      operationId: get-fixed-assets
+    post:
+      summary: Create Fixed Asset
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAsset.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-fixed-assets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/FixedAsset.v1.yaml
+  '/fixed-assets/{fixedAssetId}':
+    parameters:
+      - schema:
+          type: string
+        name: fixedAssetId
+        in: path
+        required: true
+    get:
+      summary: Get Fixed Asset
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAsset.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-fixed-assets-fixedAssetId
+    put:
+      summary: Update Fixed Asset
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAsset.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-fixed-assets-fixedAssetId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/FixedAsset.v1.yaml
+    delete:
+      summary: Remove Fixed Asset
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAsset.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-fixed-assets-fixedAssetId
+components:
+  schemas: {}

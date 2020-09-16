@@ -7,6 +7,11 @@ properties:
     type: number
   name:
     type: string
+    enum:
+      - Journal 1
+      - Journal 2
+      - Journal 3
+      - Journal 4
   type:
     type: string
   journal_items:

@@ -3,23 +3,33 @@ type: object
 properties:
   id:
     type: integer
-  code:
+  account_code:
     type: string
+    enum:
+      - Account code -1
+      - Account code -2
+      - Account code -3
+      - Account code -4
+      - Account code -5
   name:
     type: string
-    minLength: 5
-    maxLength: 7
-  tag:
+    enum:
+      - vendor 1
+      - vendor 2
+      - vendor 3
+      - vendor 4
+      - vendor 5
+  id_tag:
     type: string
   tin_number:
     type: integer
     minimum: 111111111
     maximum: 999999999
-  type_of_customer:
+  type:
     type: string
     enum:
       - Local
-      - Forign
+      - Foreign
   contact:
     $ref: ./Contact.v1.yaml
   created_at:
@@ -28,3 +38,14 @@ properties:
   updated_at:
     type: string
     format: date-time
+  tax_type:
+    type: string
+    enum:
+      - TOT
+      - VAT
+  vat:
+    type: string
+    enum:
+      - 'VAT 15%'
+      - 'withholding 35% rated purchases'
+      - 'withholding 2% rated purchases'

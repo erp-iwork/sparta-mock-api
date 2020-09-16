@@ -1,5 +1,6 @@
 title: FixedAsset
 type: object
+description: ''
 properties:
   id:
     type: string
@@ -15,6 +16,11 @@ properties:
       - number
   location:
     type: string
+    enum:
+      - Location 1
+      - Location 2
+      - Location 3
+      - Location 4
   purchase_date:
     type: string
     format: date
@@ -24,3 +30,13 @@ properties:
   updated_at:
     type: string
     format: date-time
+  acquisition_and_production_cost:
+    type: number
+  salvage_value:
+    type: number
+  residual_value:
+    type: number
+  supplier:
+    $ref: ./Vendor.v1.yaml
+  estimated_useful_life:
+    type: string

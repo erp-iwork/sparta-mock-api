@@ -7,7 +7,7 @@ properties:
     type: number
   vendor:
     $ref: ./Vendor.v1.yaml
-  "ordered_item\t":
+  ordered_item:
     type: string
   invoice_date:
     type: string

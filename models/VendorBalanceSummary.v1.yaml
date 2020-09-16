@@ -9,7 +9,7 @@ properties:
     type: number
   number_of_order:
     type: integer
-  bebit_last_month:
+  debit_last_month:
     type: string
     format: date
   days_overdue:

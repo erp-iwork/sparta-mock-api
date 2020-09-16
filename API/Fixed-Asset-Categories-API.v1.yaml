@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Fixed Asset Categories API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /fixed-asset-categories:
+    get:
+      summary: Get Fixed Asset Categories
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/FixedAssetCategory.v1.yaml
+      operationId: get-fixed-asset-categories
+    post:
+      summary: Create Fixed Asset Category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAssetCategory.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-fixed-asset-categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/FixedAssetCategory.v1.yaml
+  '/fixed-asset-categories/{fixedAssetCategoryId}':
+    parameters:
+      - schema:
+          type: string
+        name: fixedAssetCategoryId
+        in: path
+        required: true
+    get:
+      summary: Get Fixed Asset Category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAssetCategory.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-fixed-asset-categories-fixedAssetCategoryId
+    put:
+      summary: 'Update Fixed Asset Category '
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAssetCategory.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-fixed-asset-categories-fixedAssetCategoryId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/FixedAssetCategory.v1.yaml
+    delete:
+      summary: Remove Fixed Asset Category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/FixedAssetCategory.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-fixed-asset-categories-fixedAssetCategoryId
+components:
+  schemas: {}

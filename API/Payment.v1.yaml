@@ -44,7 +44,7 @@ paths:
                   type: string
                 payment_method:
                   type: string
-                status:
-                  type: string
+                amount:
+                  type: number
 components:
   schemas: {}

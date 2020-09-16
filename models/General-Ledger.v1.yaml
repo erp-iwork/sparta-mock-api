@@ -29,3 +29,6 @@ properties:
     type: string
   sub_ledger:
     type: string
+  posted_date:
+    type: string
+    format: date

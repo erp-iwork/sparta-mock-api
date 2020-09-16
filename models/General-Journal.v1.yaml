@@ -15,21 +15,23 @@ properties:
   type:
     type: string
   journal_items:
-    type: object
-    properties:
-      name:
-        type: string
-      type:
-        type: string
-      ref:
-        type: string
-      posted_date:
-        type: string
-        format: date
-      debit_account:
-        type: string
-      credit_account:
-        type: string
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        ref:
+          type: string
+        posted_date:
+          type: string
+          format: date
+        debit:
+          type: number
+        credit:
+          type: number
   created_at:
     type: string
     format: date-time

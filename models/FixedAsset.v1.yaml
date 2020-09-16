@@ -11,9 +11,7 @@ properties:
   serial_number:
     type: number
   reference:
-    type:
-      - string
-      - number
+    type: string
   location:
     type: string
     enum:
@@ -39,4 +37,4 @@ properties:
   supplier:
     $ref: ./Vendor.v1.yaml
   estimated_useful_life:
-    type: string
+    type: number

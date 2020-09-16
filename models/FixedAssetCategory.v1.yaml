@@ -1,10 +1,16 @@
 title: FixedAssetCategory
 type: object
+description: ''
 properties:
   id:
-    type: string
+    type: integer
   name:
     type: string
+    enum:
+      - Category 1
+      - Category 2
+      - Category 3
+      - Category 4
   reference:
     type:
       - string

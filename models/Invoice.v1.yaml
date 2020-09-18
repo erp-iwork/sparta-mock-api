@@ -15,3 +15,5 @@ properties:
       - USD
   invoice_line:
     $ref: ./InvoiceLine.v1.yaml
+  invoice_id:
+    type: string

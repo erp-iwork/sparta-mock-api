@@ -1,0 +1,23 @@
+title: GRNLine
+type: object
+properties:
+  id:
+    type: string
+  lot_no:
+    type: number
+  ordered_qty:
+    type: number
+  qty_to_received:
+    type: number
+  qty_received:
+    type: number
+  total_amount:
+    type: number
+  posting_date:
+    type: string
+  remarks:
+    type: string
+  grn:
+    $ref: ./GRN.v1.yaml
+  item:
+    $ref: ./Item.v1.yaml

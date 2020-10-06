@@ -3,22 +3,25 @@ type: object
 properties:
   id:
     type: string
-  product_name:
+  product:
     type: string
   account:
     type: string
   quantity:
-    type: number
-  unit_price:
-    type: number
-    format: double
-  tax:
+    type: integer
+  price:
+    type: integer
+    format: int32
+  taxes:
     type: string
     enum:
       - '15%'
       - '10%'
       - '5%'
   amount:
-    type: number
-    format: double
-    minimum: 0
+    type: integer
+    format: int32
+required:
+  - price
+  - taxes
+  - amount

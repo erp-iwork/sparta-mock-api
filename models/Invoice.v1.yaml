@@ -13,7 +13,32 @@ properties:
     enum:
       - ETB
       - USD
-  invoice_line:
-    $ref: ./InvoiceLine.v1.yaml
+  invoice_lines:
+    type: array
+    items:
+      $ref: ./InvoiceLine.v1.yaml
   invoice_id:
     type: string
+  status:
+    type: string
+    enum:
+      - Draft
+      - Open
+      - Paid
+  invoice_number:
+    type: integer
+    format: int32
+    enum:
+      - 11432
+      - 77823
+      - 94792
+      - 43241
+      - 25323
+      - 50982
+      - 34525
+      - 56235
+      - 74234
+      - 23557
+      - 76342
+  supplier:
+    $ref: ./Supplier.v1.yaml

@@ -1,7 +1,7 @@
-title: Customer
+title: Supplier
 type: object
 x-tags:
-  - Customers
+  - Suppliers
 properties:
   id:
     type: integer
@@ -16,11 +16,11 @@ properties:
   name:
     type: string
     enum:
-      - Customer 1
-      - Customer 2
-      - Customer 3
-      - Customer 4
-      - Customer 5
+      - Supplier 1
+      - Supplier 2
+      - Supplier 3
+      - Supplier 4
+      - Supplier 5
   id_tag:
     type: string
   payment_term:
@@ -45,3 +45,4 @@ properties:
   updated_at:
     type: string
     format: date-time
+

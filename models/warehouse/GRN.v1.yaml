@@ -1,0 +1,21 @@
+title: GRN
+type: object
+properties:
+  id:
+    type: string
+  document_number:
+    type: number
+  purchase_order_no:
+    type: number
+  vendor_shipment_no:
+    type: number
+  sales_order_no:
+    type: number
+  posting_date:
+    type: string
+  order_date:
+    type: string
+  remarks:
+    type: string
+  warehouse:
+    $ref: ./Warehouse.v1.yaml

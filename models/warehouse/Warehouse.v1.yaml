@@ -1,0 +1,13 @@
+title: Warehouse
+type: object
+properties:
+  id:
+    type: string
+  code:
+    type: string
+  name:
+    type: string
+  location:
+    type: string
+  remarks:
+    type: string

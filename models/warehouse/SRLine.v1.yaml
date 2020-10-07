@@ -1,15 +1,11 @@
-title: GRNLine
+title: SRLine
 type: object
 properties:
   id:
     type: string
-  lot_no:
+  qty:
     type: number
-  ordered_qty:
-    type: number
-  qty_to_received:
-    type: number
-  qty_received:
+  unit_price:
     type: number
   total_amount:
     type: number
@@ -17,23 +13,23 @@ properties:
     type: string
   remarks:
     type: string
-  grn:
-    title: GRN
+  sr:
+    title: SR
     type: object
     properties:
       id:
         type: string
       document_number:
         type: number
-      purchase_order_no:
-        type: number
-      vendor_shipment_no:
-        type: number
-      sales_order_no:
-        type: number
-      posting_date:
+      requested_by:
         type: string
-      order_date:
+      requested_date:
+        type: string
+      approved_by:
+        type: string
+      approved_date:
+        type: string
+      approve_status:
         type: string
       remarks:
         type: string

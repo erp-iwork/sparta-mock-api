@@ -1,0 +1,13 @@
+title: Bin
+type: object
+properties:
+  id:
+    type: string
+  code:
+    type: string
+  name:
+    type: string
+  warehose:
+    $ref: ''
+  remarks:
+    type: string

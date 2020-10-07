@@ -1,22 +1,42 @@
-title: GRN
+title: SIV
 type: object
 properties:
   id:
     type: string
   document_number:
     type: number
-  purchase_order_no:
-    type: number
-  vendor_shipment_no:
-    type: number
   sales_order_no:
     type: number
-  posting_date:
+  purchase_return_no:
+    type: number
+  issued_by:
     type: string
-  order_date:
+  posting_date:
     type: string
   remarks:
     type: string
+  sr:
+    title: SR
+    type: object
+    properties:
+      id:
+        type: string
+      document_number:
+        type: number
+      requested_by:
+        type: string
+      requested_date:
+        type: string
+      approved_by:
+        type: string
+      approved_date:
+        type: string
+      approve_status:
+        type: string
+      remarks:
+        type: string
+      warehouse:
+        $ref: '#/properties/warehouse'
   warehouse:
     title: Warehouse
     type: object

@@ -8,6 +8,18 @@ properties:
   name:
     type: string
   location:
-    type: string
+    title: Location
+    type: object
+    properties:
+      id:
+        type: string
+      code:
+        type: string
+      name:
+        type: string
+      country:
+        type: string
+      state:
+        type: string
   remarks:
     type: string

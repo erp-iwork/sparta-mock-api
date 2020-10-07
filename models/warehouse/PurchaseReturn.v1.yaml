@@ -1,18 +1,20 @@
-title: GRNLine
+title: PurchaseReturn
 type: object
 properties:
   id:
     type: string
-  lot_no:
+  document_no:
     type: number
-  ordered_qty:
+  purchase_order_no:
     type: number
-  qty_to_received:
+  supplier_invoice_no:
     type: number
-  qty_received:
-    type: number
-  total_amount:
-    type: number
+  issued_by:
+    type: string
+  approved_by:
+    type: string
+  approved_date:
+    type: string
   posting_date:
     type: string
   remarks:
@@ -63,47 +65,3 @@ properties:
                 type: string
           remarks:
             type: string
-  item:
-    title: Item
-    type: object
-    properties:
-      id:
-        type: string
-      number:
-        type: number
-      name:
-        type: string
-      category:
-        title: ItemCategory
-        type: object
-        properties:
-          id:
-            type: string
-          name:
-            type: string
-      unit:
-        type: string
-      invintory_qty:
-        type: number
-      qty_on_purch_order:
-        type: number
-      qty_on_prod_order:
-        type: number
-      qty_on_sales_order:
-        type: number
-      isBlocked:
-        type: boolean
-      costing_method:
-        type: string
-      unit_price:
-        type: number
-      gen_prod_posting_group:
-        type: string
-      vat_prod_posting_group:
-        type: string
-      inventory_posting_group:
-        type: string
-      sales_price:
-        type: number
-      remarks:
-        type: string

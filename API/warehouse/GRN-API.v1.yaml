@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: GRN-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /grns:
+    get:
+      summary: get grns
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/GRN.v1.yaml
+      operationId: get-grns
+    post:
+      summary: create grn
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/GRN.v1.yaml
+        '400':
+          description: Created
+      operationId: post-grns
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/GRN.v1.yaml
+  '/grns/{grnId}':
+    parameters:
+      - schema:
+          type: string
+        name: grnId
+        in: path
+        required: true
+    get:
+      summary: get grn
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/GRN.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-grns-grnId
+    put:
+      summary: update grn
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/GRN.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-grns-grnId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/GRN.v1.yaml
+    delete:
+      summary: remove grn
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/GRN.v1.yaml
+        '404':
+          description: Created
+      operationId: delete-grns-grnId
+components:
+  schemas: {}

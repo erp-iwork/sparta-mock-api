@@ -8,7 +8,13 @@ properties:
   name:
     type: string
   category:
-    $ref: ./ItemCategory.v1.yaml
+    title: ItemCategory
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
   unit:
     type: string
   invintory_qty:

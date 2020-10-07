@@ -1,0 +1,13 @@
+title: Location
+type: object
+properties:
+  id:
+    type: string
+  code:
+    type: string
+  name:
+    type: string
+  country:
+    type: string
+  state:
+    type: string

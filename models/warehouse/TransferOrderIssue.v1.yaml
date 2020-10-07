@@ -1,0 +1,59 @@
+title: TransferOrderIssue
+type: object
+properties:
+  id:
+    type: string
+  document_number:
+    type: number
+  issued_by:
+    type: string
+  posting_date:
+    type: string
+  remarks:
+    type: string
+  sr:
+    title: SR
+    type: object
+    properties:
+      id:
+        type: string
+      document_number:
+        type: number
+      requested_by:
+        type: string
+      requested_date:
+        type: string
+      approved_by:
+        type: string
+      approved_date:
+        type: string
+      approve_status:
+        type: string
+      remarks:
+        type: string
+      warehouse:
+        title: Warehouse
+        type: object
+        properties:
+          id:
+            type: string
+          code:
+            type: string
+          name:
+            type: string
+          location:
+            title: Location
+            type: object
+            properties:
+              id:
+                type: string
+              code:
+                type: string
+              name:
+                type: string
+              country:
+                type: string
+              state:
+                type: string
+          remarks:
+            type: string

@@ -1,54 +1,78 @@
-title: GRNLine
+title: SalesReturnLine
 type: object
 properties:
   id:
     type: string
-  lot_no:
-    type: number
-  ordered_qty:
-    type: number
-  qty_to_received:
+  qty_ordered:
     type: number
   qty_received:
     type: number
-  total_amount:
+  qty_to_issue:
+    type: number
+  qty_issued:
     type: number
   posting_date:
     type: string
   remarks:
     type: string
-  grn:
-    title: GRN
+  sales_return:
+    title: SalesReturn
     type: object
     properties:
       id:
         type: string
-      document_number:
-        type: number
-      purchase_order_no:
-        type: number
-      vendor_shipment_no:
+      document_no:
         type: number
       sales_order_no:
         type: number
-      posting_date:
+      received_by:
         type: string
-      order_date:
+      posting_date:
         type: string
       remarks:
         type: string
-      warehouse:
-        title: Warehouse
+      siv:
+        title: SIV
         type: object
         properties:
           id:
             type: string
-          code:
+          document_number:
+            type: number
+          sales_order_no:
+            type: number
+          purchase_return_no:
+            type: number
+          issued_by:
             type: string
-          name:
+          posting_date:
             type: string
-          location:
-            title: Location
+          remarks:
+            type: string
+          sr:
+            title: SR
+            type: object
+            properties:
+              id:
+                type: string
+              document_number:
+                type: number
+              requested_by:
+                type: string
+              requested_date:
+                type: string
+              approved_by:
+                type: string
+              approved_date:
+                type: string
+              approve_status:
+                type: string
+              remarks:
+                type: string
+              warehouse:
+                $ref: '#/properties/sales_return/properties/siv/properties/warehouse'
+          warehouse:
+            title: Warehouse
             type: object
             properties:
               id:
@@ -57,12 +81,22 @@ properties:
                 type: string
               name:
                 type: string
-              country:
+              location:
+                title: Location
+                type: object
+                properties:
+                  id:
+                    type: string
+                  code:
+                    type: string
+                  name:
+                    type: string
+                  country:
+                    type: string
+                  state:
+                    type: string
+              remarks:
                 type: string
-              state:
-                type: string
-          remarks:
-            type: string
   item:
     title: Item
     type: object

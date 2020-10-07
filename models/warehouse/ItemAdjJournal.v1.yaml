@@ -1,68 +1,28 @@
-title: GRNLine
+title: ItemAdjJournal
 type: object
 properties:
   id:
     type: string
-  lot_no:
-    type: number
-  ordered_qty:
-    type: number
-  qty_to_received:
-    type: number
-  qty_received:
-    type: number
-  total_amount:
+  document_no:
     type: number
   posting_date:
     type: string
+  entry_type:
+    type: string
+  quantity:
+    type: number
   remarks:
     type: string
-  grn:
-    title: GRN
+  unit_of_measure:
+    title: UnitMeasurement
     type: object
     properties:
       id:
         type: string
-      document_number:
-        type: number
-      purchase_order_no:
-        type: number
-      vendor_shipment_no:
-        type: number
-      sales_order_no:
-        type: number
-      posting_date:
+      code:
         type: string
-      order_date:
+      name:
         type: string
-      remarks:
-        type: string
-      warehouse:
-        title: Warehouse
-        type: object
-        properties:
-          id:
-            type: string
-          code:
-            type: string
-          name:
-            type: string
-          location:
-            title: Location
-            type: object
-            properties:
-              id:
-                type: string
-              code:
-                type: string
-              name:
-                type: string
-              country:
-                type: string
-              state:
-                type: string
-          remarks:
-            type: string
   item:
     title: Item
     type: object

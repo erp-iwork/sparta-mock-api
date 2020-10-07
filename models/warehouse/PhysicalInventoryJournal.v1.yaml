@@ -12,46 +12,4 @@ properties:
   remarks:
     type: string
   item:
-    title: Item
-    type: object
-    properties:
-      id:
-        type: string
-      number:
-        type: number
-      name:
-        type: string
-      category:
-        title: ItemCategory
-        type: object
-        properties:
-          id:
-            type: string
-          name:
-            type: string
-      unit:
-        type: string
-      invintory_qty:
-        type: number
-      qty_on_purch_order:
-        type: number
-      qty_on_prod_order:
-        type: number
-      qty_on_sales_order:
-        type: number
-      isBlocked:
-        type: boolean
-      costing_method:
-        type: string
-      unit_price:
-        type: number
-      gen_prod_posting_group:
-        type: string
-      vat_prod_posting_group:
-        type: string
-      inventory_posting_group:
-        type: string
-      sales_price:
-        type: number
-      remarks:
-        type: string
+    $ref: ./Item.v1.yaml

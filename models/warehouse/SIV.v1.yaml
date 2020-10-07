@@ -16,50 +16,10 @@ properties:
   remarks:
     type: string
   sr:
-    title: SR
-    type: object
-    properties:
-      id:
-        type: string
-      document_number:
-        type: number
-      requested_by:
-        type: string
-      requested_date:
-        type: string
-      approved_by:
-        type: string
-      approved_date:
-        type: string
-      approve_status:
-        type: string
-      remarks:
-        type: string
-      warehouse:
-        $ref: '#/properties/warehouse'
+    $ref: ./SR.v1.yaml
   warehouse:
-    title: Warehouse
-    type: object
-    properties:
-      id:
-        type: string
-      code:
-        type: string
-      name:
-        type: string
-      location:
-        title: Location
-        type: object
-        properties:
-          id:
-            type: string
-          code:
-            type: string
-          name:
-            type: string
-          country:
-            type: string
-          state:
-            type: string
-      remarks:
-        type: string
+    $ref: ./Warehouse.v1.yaml
+  siv_lines:
+    type: array
+    items:
+      $ref: ./SIVLine.v1.yaml

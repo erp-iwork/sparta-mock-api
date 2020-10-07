@@ -1,11 +1,7 @@
-title: Bin
+title: ItemCategory
 type: object
 properties:
   id:
     type: string
-  code:
-    type: string
   name:
-    type: string
-  remarks:
     type: string

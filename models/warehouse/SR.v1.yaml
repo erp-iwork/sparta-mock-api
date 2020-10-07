@@ -18,28 +18,8 @@ properties:
   remarks:
     type: string
   warehouse:
-    title: Warehouse
-    type: object
-    properties:
-      id:
-        type: string
-      code:
-        type: string
-      name:
-        type: string
-      location:
-        title: Location
-        type: object
-        properties:
-          id:
-            type: string
-          code:
-            type: string
-          name:
-            type: string
-          country:
-            type: string
-          state:
-            type: string
-      remarks:
-        type: string
+    $ref: ./Warehouse.v1.yaml
+  sr_lines:
+    type: array
+    items:
+      $ref: ./SRLine.v1.yaml

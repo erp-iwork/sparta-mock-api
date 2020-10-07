@@ -8,18 +8,8 @@ properties:
   name:
     type: string
   location:
-    title: Location
-    type: object
-    properties:
-      id:
-        type: string
-      code:
-        type: string
-      name:
-        type: string
-      country:
-        type: string
-      state:
-        type: string
+    $ref: ./Location.v1.yaml
   remarks:
     type: string
+  bin:
+    $ref: ./Bin.v1.yaml

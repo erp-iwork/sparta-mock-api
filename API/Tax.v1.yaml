@@ -39,5 +39,30 @@ paths:
           application/json:
             schema:
               $ref: ../models/Tax.v1.yaml
+  '/taxes/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    put:
+      summary: Update Tax
+      tags:
+        - Tax
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Tax.v1.yaml
+      operationId: put-taxes-id
+      description: Updates tax info
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/Tax.v1.yaml
 components:
   schemas: {}

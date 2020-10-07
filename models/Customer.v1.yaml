@@ -15,12 +15,8 @@ properties:
       - Account code -5
   name:
     type: string
-    enum:
-      - Customer 1
-      - Customer 2
-      - Customer 3
-      - Customer 4
-      - Customer 5
+    minLength: 5
+    maxLength: 10
   id_tag:
     type: string
   payment_term:
@@ -29,7 +25,7 @@ properties:
       - 5 Days
       - 15 Days
       - End of the Month
-      - 30% Advance End of 30 Days
+      - '30% Advance End of 30 Days'
   type:
     type: string
     enum:

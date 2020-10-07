@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Item API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /items:
+    get:
+      summary: get items
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: get-items
+    post:
+      summary: create item
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-items
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Item.v1.yaml
+  '/items/{itemId}':
+    parameters:
+      - schema:
+          type: string
+        name: itemId
+        in: path
+        required: true
+    get:
+      summary: get item
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-items-itemId
+    put:
+      summary: update item
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-items-itemId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Item.v1.yaml
+    delete:
+      summary: remove item
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-items-itemId
+components:
+  schemas: {}

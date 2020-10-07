@@ -1,0 +1,92 @@
+openapi: 3.0.0
+info:
+  title: Purchase-Returns-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchase-returns:
+    get:
+      summary: get Purchase Returns
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+      operationId: get-purchase-returns
+    post:
+      summary: create Purchase Return
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-purchase-returns
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+  '/purchase-returns/{purchaseReturnId}':
+    parameters:
+      - schema:
+          type: string
+        name: purchaseReturnId
+        in: path
+        required: true
+    get:
+      summary: get Purchase Return
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+      operationId: get-purchase-returns-purchaseReturnId
+    put:
+      summary: update Purchase Return
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+        '400':
+          description: Created
+        '404':
+          description: Unauthorized
+      operationId: put-purchase-returns-purchaseReturnId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+    delete:
+      summary: remove Purchase Return
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+        '404':
+          description: Created
+      operationId: delete-purchase-returns-purchaseReturnId
+components:
+  schemas: {}

@@ -1,0 +1,92 @@
+openapi: 3.0.0
+info:
+  title: SIV-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /sivs:
+    get:
+      summary: get sivs
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/SIV.v1.yaml
+      operationId: get-sivs
+    post:
+      summary: create siv
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SIV.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-sivs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/SIV.v1.yaml
+  '/sivs/{sivId}':
+    parameters:
+      - schema:
+          type: string
+        name: sivId
+        in: path
+        required: true
+    get:
+      summary: get siv
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SIV.v1.yaml
+      operationId: get-sivs-sivId
+    put:
+      summary: update siv
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SIV.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-sivs-sivId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/SIV.v1.yaml
+    delete:
+      summary: remove siv
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SIV.v1.yaml
+        '404':
+          description: Created
+      operationId: delete-sivs-sivId
+components:
+  schemas: {}

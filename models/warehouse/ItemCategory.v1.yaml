@@ -1,8 +1,10 @@
 title: ItemCategory
 type: object
+description: ''
 properties:
   id:
     type: string
   name:
     type: string
-description: ''
+  code:
+    type: string

@@ -1,4 +1,4 @@
-title: UnitMeasurement
+title: EntryType
 type: object
 properties:
   id:

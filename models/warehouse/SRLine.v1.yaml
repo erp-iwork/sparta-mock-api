@@ -15,3 +15,5 @@ properties:
     type: string
   item:
     $ref: ./Item.v1.yaml
+  unit_measure:
+    $ref: ./UnitMeasurement.v1.yaml

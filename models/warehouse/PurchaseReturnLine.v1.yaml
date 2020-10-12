@@ -17,3 +17,7 @@ properties:
     type: string
   item:
     $ref: ./Item.v1.yaml
+  from_warehouse:
+    $ref: ./Warehouse.v1.yaml
+  from_bin:
+    $ref: ./Bin.v1.yaml

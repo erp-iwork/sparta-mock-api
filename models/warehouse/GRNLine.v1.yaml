@@ -19,3 +19,7 @@ properties:
     type: string
   item:
     $ref: ./Item.v1.yaml
+  unit_measure:
+    type: string
+  unit_price:
+    type: string

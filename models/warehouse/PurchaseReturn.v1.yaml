@@ -25,3 +25,9 @@ properties:
     type: array
     items:
       $ref: ./PurchaseReturnLine.v1.yaml
+  approved_status:
+    type: string
+  from_warehouse:
+    $ref: ./Warehouse.v1.yaml
+  vendor:
+    $ref: ../Vendor.v1.yaml

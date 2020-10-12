@@ -13,3 +13,15 @@ properties:
     type: string
   item:
     $ref: ./Item.v1.yaml
+  posting_date:
+    type: string
+  warehouse:
+    $ref: ./Warehouse.v1.yaml
+  unit_price:
+    type: number
+  amount_physical_count:
+    type: string
+  bin:
+    $ref: ./Bin.v1.yaml
+  basic_unit_of_measure:
+    type: string

@@ -15,5 +15,16 @@ properties:
     $ref: ./SR.v1.yaml
   transfer_order_issue_lines:
     type: array
-    items:
-      $ref: ./TransferOrderIssueLine.v1.yaml
+    items: {}
+  items:
+    $ref: ./TransferOrderIssueLine.v1.yaml
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+  approve_status:
+    type: string
+  from_warehouse:
+    type: string
+  to_warehouse:
+    type: string

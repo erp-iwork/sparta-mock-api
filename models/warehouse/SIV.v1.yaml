@@ -7,8 +7,6 @@ properties:
     type: number
   sales_order_no:
     type: number
-  purchase_return_no:
-    type: number
   issued_by:
     type: string
   posting_date:
@@ -23,3 +21,11 @@ properties:
     type: array
     items:
       $ref: ./SIVLine.v1.yaml
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+  approved_status:
+    type: string
+  bin:
+    $ref: ./Bin.v1.yaml

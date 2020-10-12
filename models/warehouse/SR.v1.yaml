@@ -23,3 +23,9 @@ properties:
     type: array
     items:
       $ref: ./SRLine.v1.yaml
+  type_of_issue:
+    type: string
+  status:
+    type: string
+  bin:
+    $ref: ./Bin.v1.yaml

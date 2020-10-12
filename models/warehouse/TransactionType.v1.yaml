@@ -1,4 +1,4 @@
-title: UnitMeasurement
+title: TransactionType
 type: object
 properties:
   id:

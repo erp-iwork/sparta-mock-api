@@ -8,3 +8,5 @@ properties:
     type: string
   code:
     type: string
+  remarks:
+    type: string

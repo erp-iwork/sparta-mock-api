@@ -1,23 +1,21 @@
-title: ItemAdjJournal
+title: InvintoryTransaction
 type: object
 properties:
   id:
     type: string
-  document_no:
-    type: number
   posting_date:
     type: string
   transaction_type:
-    type: string
-  quantity:
-    type: number
-  remarks:
-    type: string
-  unit_measure:
-    $ref: ./UnitMeasurement.v1.yaml
+    $ref: ./TransactionType.v1.yaml
   item:
     $ref: ./Item.v1.yaml
+  quantity:
+    type: string
+  entry_type:
+    $ref: ./EntryType.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
+  basic_unit_of_measure:
+    $ref: ./UnitMeasurement.v1.yaml
   warehouse:
     $ref: ./Warehouse.v1.yaml

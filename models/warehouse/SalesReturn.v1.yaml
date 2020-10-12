@@ -13,9 +13,11 @@ properties:
     type: string
   remarks:
     type: string
-  siv:
-    $ref: ./SIV.v1.yaml
   sales_return_lines:
     type: array
     items:
       $ref: ./SalesReturnLine.v1.yaml
+  status:
+    type: string
+  customer:
+    $ref: ../Customer.v1.yaml

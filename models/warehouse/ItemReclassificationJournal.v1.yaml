@@ -17,3 +17,7 @@ properties:
     $ref: ./Item.v1.yaml
   unit_of_measure:
     $ref: ./UnitMeasurement.v1.yaml
+  warehouse:
+    $ref: ./Warehouse.v1.yaml
+  bin:
+    $ref: ./Bin.v1.yaml

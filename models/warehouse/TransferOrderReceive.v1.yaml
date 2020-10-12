@@ -17,3 +17,13 @@ properties:
     type: array
     items:
       $ref: ./TransferOrderReceiveLine.v1.yaml
+  status:
+    type: string
+  to_warehouse:
+    type: string
+  from_warehouse:
+    type: string
+  from_bin:
+    type: string
+  to_bin:
+    type: string

@@ -1,0 +1,11 @@
+title: Entry Type
+type: object
+x-tags:
+  - Entry Type
+properties:
+  id:
+    type: integer
+  code:
+    type: string
+  name:
+    type: string

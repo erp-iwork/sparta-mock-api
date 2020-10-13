@@ -1,0 +1,95 @@
+openapi: 3.0.0
+info:
+  title: Entry Type
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /entry-types/:
+    get:
+      summary: Fetches a single entry type
+      tags:
+        - Entry Type
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/Entry-Type.v1.yaml
+      operationId: get-entry-types
+    post:
+      summary: Creates an entry type
+      tags:
+        - Entry Type
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Entry-Type.v1.yaml
+      operationId: post-entry-types
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Entry-Type.v1.yaml
+        description: ''
+  '/entry-types/{id}/':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Fetches a single entry type
+      tags:
+        - Entry Type
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Entry-Type.v1.yaml
+      operationId: get-entry-types-id
+    put:
+      summary: Updates a single entry type
+      tags:
+        - Entry Type
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Entry-Type.v1.yaml
+      operationId: put-entry-types-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Entry-Type.v1.yaml
+    delete:
+      summary: Removes a single entry type
+      tags:
+        - Entry Type
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Entry-Type.v1.yaml
+      operationId: delete-entry-types-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Entry-Type.v1.yaml
+components:
+  schemas: {}

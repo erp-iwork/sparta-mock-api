@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: ItemAvailability
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /item-availability:
+    get:
+      summary: Fetchs all item availablilty
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: get-item-availability
+      description: Fetches all item availability
+  '/item-availability/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get single item availability
+      tags:
+        - ItemAvailability
+      operationId: get-item-availability-id
+      description: Get a single item availability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+    put:
+      summary: Edit item
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: put-item-availability-id
+      description: Update item availability
+    delete:
+      summary: Remove Item
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: delete-item-availability-id
+      description: Remove item availability
+components:
+  schemas: {}

@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: ItemReclassificationJournal
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /item-reclassification-journal:
+    get:
+      summary: Gets a list of bins
+      tags:
+        - Item Reclassification Journal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+      operationId: get-item-reclassification-journal
+      description: Gets all bins
+    post:
+      summary: Create a bin
+      tags:
+        - Item Reclassification Journal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+      operationId: post-item-reclassification-journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+  '/item-reclassification-journal/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Gets a single item reclassification journal
+      tags:
+        - Item Reclassification Journal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+      operationId: get-item-reclassification-journal-id
+      description: Gets a single bin
+    put:
+      summary: Updates a single item reclassification journal
+      tags:
+        - Item Reclassification Journal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+      operationId: put-item-reclassification-journal-id
+      description: Updates a single item reclassification journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+    delete:
+      summary: Remove a single item reclassification journal
+      tags:
+        - Item Reclassification Journal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemReclassificationJournal.v1.yaml
+      operationId: delete-item-reclassification-journal-id
+      description: Removes a single bin
+components:
+  schemas: {}

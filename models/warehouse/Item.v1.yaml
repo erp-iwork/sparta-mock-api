@@ -17,7 +17,7 @@ properties:
         type: string
   unit:
     type: string
-  invintory_qty:
+  inventory_qty:
     type: number
   qty_on_purch_order:
     type: number

@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: ItemAvailabilityByLocation
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /item-availability-by-location:
+    get:
+      summary: Get a list of items
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: get-item-availability-by-location
+      description: Get a list of items by item availability location
+  '/item-availability-by-location/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get a single item
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: get-item-availability-by-location-id
+      description: Get a single item availability by location
+    put:
+      summary: Update a single item by location
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: put-item-availability-by-location-id
+      description: Update item availability by location
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Item.v1.yaml
+    delete:
+      summary: Remove a single item
+      tags:
+        - ItemAvailability
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
+      operationId: delete-item-availability-by-location-id
+      description: Remove item availability by location
+components:
+  schemas: {}

@@ -1,0 +1,16 @@
+openapi: 3.0.0
+info:
+  title: StockMovementByLocation
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /stock-movement-by-location:
+    get:
+      summary: Gets a list of stock movement by location
+      tags:
+        - Stock Movement
+      responses: {}
+      operationId: get-stock-movement-by-location
+components:
+  schemas: {}

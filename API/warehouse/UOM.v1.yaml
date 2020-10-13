@@ -1,0 +1,89 @@
+openapi: 3.0.0
+info:
+  title: UOM
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /uom:
+    get:
+      summary: Fetches all the unit measurements
+      tags:
+        - UOM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+      operationId: get-uom
+    post:
+      summary: Creates an UOM
+      tags:
+        - UOM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+      operationId: post-uom
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+  '/uom/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Fetches a single UOM
+      tags:
+        - UOM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+      operationId: get-uom-id
+    put:
+      summary: Updates a single UOM
+      tags:
+        - UOM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+      operationId: put-uom-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+    delete:
+      summary: Removes a single UOM
+      tags:
+        - UOM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/UnitMeasurement.v1.yaml
+      operationId: delete-uom-id
+components:
+  schemas: {}

@@ -1,0 +1,89 @@
+openapi: 3.0.0
+info:
+  title: ItemAdjJournal
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /item-adjcent-journal:
+    get:
+      summary: Get a list of item journal
+      tags:
+        - ItemAdjJournal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+      operationId: get-item-adjcent-journal
+      description: Get a list of item adjcent journal
+    post:
+      summary: Create a item adjcent journal
+      tags:
+        - ItemAdjJournal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+      operationId: post-item-adjcent-journal
+      description: Create an item adjecent journal
+  '/item-adjcent-journal/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Gets a single item adjecent journal
+      tags:
+        - ItemAdjJournal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+      operationId: get-item-adjcent-journal-id
+      description: Gets a single item adjcent journal
+    put:
+      summary: Update a single item adjcent journal
+      tags:
+        - ItemAdjJournal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+      operationId: put-item-adjcent-journal-id
+      description: Update a single item adjcent journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+    delete:
+      summary: Remove a single item adjcent journal
+      tags:
+        - ItemAdjJournal
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+      operationId: delete-item-adjcent-journal-id
+      description: Remove adjcent journal
+components:
+  schemas: {}

@@ -23,3 +23,6 @@ properties:
         type: string
   remarks:
     type: string
+  lastModified:
+    type: string
+    format: date

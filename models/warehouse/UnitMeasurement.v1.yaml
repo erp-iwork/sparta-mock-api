@@ -1,9 +1,17 @@
 title: UnitMeasurement
 type: object
+x-tags:
+  - UOM
+description: ''
 properties:
   id:
-    type: string
+    type: integer
   code:
     type: string
   name:
     type: string
+  remarks:
+    type: string
+  lastModified:
+    type: string
+    format: date

@@ -8,6 +8,6 @@ properties:
   name:
     type: string
   warehose:
-    $ref: ''
+    $ref: ./Warehouse.v1.yaml
   remarks:
     type: string

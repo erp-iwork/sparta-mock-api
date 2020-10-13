@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: StockMovement
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /stock-movement:
+    get:
+      summary: Get all the stock movements
+      tags:
+        - Stock Movement
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/StockMovement.v1.yaml
+      operationId: get-stock-movement
+      description: Get all the stock movement
+  '/stock-movement/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get a single stock movement
+      tags:
+        - Stock Movement
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/StockMovement.v1.yaml
+      operationId: get-stock-movement-id
+      description: Get a single stock movement
+    put:
+      summary: Update a single stock movement
+      tags:
+        - Stock Movement
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/StockMovement.v1.yaml
+      operationId: put-stock-movement-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/StockMovement.v1.yaml
+      description: Updates a single stock movement
+    delete:
+      summary: Remove a stock movement
+      tags:
+        - Stock Movement
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/StockMovement.v1.yaml
+      operationId: delete-stock-movement-id
+      description: Remove a single stock movement
+components:
+  schemas: {}

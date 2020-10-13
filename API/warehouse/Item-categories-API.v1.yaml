@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Item-categories-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /item-categories:
+    get:
+      summary: get item categories
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/ItemCategory.v1.yaml
+      operationId: get-item-categories
+    post:
+      summary: create item category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemCategory.v1.yaml
+        '400':
+          description: Created
+      operationId: post-item-categories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/ItemCategory.v1.yaml
+  '/item-categories/{itemCategoryId}':
+    parameters:
+      - schema:
+          type: string
+        name: itemCategoryId
+        in: path
+        required: true
+    get:
+      summary: Get item category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemCategory.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-item-categories-itemCategoryId
+    put:
+      summary: 'update item category '
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemCategory.v1.yaml
+        '400':
+          description: Internal Server Error
+        '404':
+          description: Not Found
+      operationId: put-item-categories-itemCategoryId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/ItemCategory.v1.yaml
+    delete:
+      summary: remove item category
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/ItemCategory.v1.yaml
+        '404':
+          description: Created
+      operationId: delete-item-categories-itemCategoryId
+components:
+  schemas: {}

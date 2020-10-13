@@ -17,93 +17,9 @@ properties:
     type: string
   remarks:
     type: string
-  grn:
-    title: GRN
-    type: object
-    properties:
-      id:
-        type: string
-      document_number:
-        type: number
-      purchase_order_no:
-        type: number
-      vendor_shipment_no:
-        type: number
-      sales_order_no:
-        type: number
-      posting_date:
-        type: string
-      order_date:
-        type: string
-      remarks:
-        type: string
-      warehouse:
-        title: Warehouse
-        type: object
-        properties:
-          id:
-            type: string
-          code:
-            type: string
-          name:
-            type: string
-          location:
-            title: Location
-            type: object
-            properties:
-              id:
-                type: string
-              code:
-                type: string
-              name:
-                type: string
-              country:
-                type: string
-              state:
-                type: string
-          remarks:
-            type: string
   item:
-    title: Item
-    type: object
-    properties:
-      id:
-        type: string
-      number:
-        type: number
-      name:
-        type: string
-      category:
-        title: ItemCategory
-        type: object
-        properties:
-          id:
-            type: string
-          name:
-            type: string
-      unit:
-        type: string
-      invintory_qty:
-        type: number
-      qty_on_purch_order:
-        type: number
-      qty_on_prod_order:
-        type: number
-      qty_on_sales_order:
-        type: number
-      isBlocked:
-        type: boolean
-      costing_method:
-        type: string
-      unit_price:
-        type: number
-      gen_prod_posting_group:
-        type: string
-      vat_prod_posting_group:
-        type: string
-      inventory_posting_group:
-        type: string
-      sales_price:
-        type: number
-      remarks:
-        type: string
+    $ref: ./Item.v1.yaml
+  unit_measure:
+    type: string
+  unit_price:
+    type: string

@@ -1,0 +1,12 @@
+title: ItemCategory
+type: object
+description: ''
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  code:
+    type: string
+  remarks:
+    type: string

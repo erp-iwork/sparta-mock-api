@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: Transfer-Order-Issues-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /transfer-order-issues:
+    get:
+      summary: get Transfer Order Issues
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+      operationId: get-transfer-order-issues
+    post:
+      summary: create Transfer Order Issue
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-transfer-order-issues
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+  '/transfer-order-issues/{transferOrderIssueId}':
+    parameters:
+      - schema:
+          type: string
+        name: transferOrderIssueId
+        in: path
+        required: true
+    get:
+      summary: get Transfer Order Issue
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+      operationId: get-transfer-order-issues-transferOrderIssueId
+    put:
+      summary: update Transfer Order Issue
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-transfer-order-issues-transferOrderIssueId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+    delete:
+      summary: remove Transfer Order Issue
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+      operationId: delete-transfer-order-issues-transferOrderIssueId
+components:
+  schemas: {}

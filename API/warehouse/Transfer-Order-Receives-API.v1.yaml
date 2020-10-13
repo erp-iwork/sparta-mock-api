@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: Transfer-Order-Receives-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /transfer-order-receives:
+    post:
+      summary: create Transfer Order Receive
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+        '400':
+          description: Bad Request
+      operationId: post-transfer-order-receives
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+    get:
+      summary: get Transfer Order Receives
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+      operationId: get-transfer-order-receives
+  '/transfer-order-receives/{transferOrderReceiveId}':
+    parameters:
+      - schema:
+          type: string
+        name: transferOrderReceiveId
+        in: path
+        required: true
+    put:
+      summary: update Transfer Order Receive
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-transfer-order-receives-transferOrderReceiveId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+    get:
+      summary: get Transfer Order Receive
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+      operationId: get-transfer-order-receives-transferOrderReceiveId
+    delete:
+      summary: remove Transfer Order Receive
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+      operationId: delete-transfer-order-receives-transferOrderReceiveId
+components:
+  schemas: {}

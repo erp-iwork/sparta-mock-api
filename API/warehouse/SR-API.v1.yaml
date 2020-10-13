@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: SR-API
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /srs:
+    get:
+      summary: get srs
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/SR.v1.yaml
+      operationId: get-srs
+    post:
+      summary: create sr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SR.v1.yaml
+        '400':
+          description: Created
+      operationId: post-srs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/SR.v1.yaml
+  '/srs/{srId}':
+    parameters:
+      - schema:
+          type: string
+        name: srId
+        in: path
+        required: true
+    get:
+      summary: get sr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SR.v1.yaml
+        '404':
+          description: Not Found
+      operationId: get-srs-srId
+    put:
+      summary: update sr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SR.v1.yaml
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+      operationId: put-srs-srId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/SR.v1.yaml
+    delete:
+      summary: remove sr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/SR.v1.yaml
+        '404':
+          description: Not Found
+      operationId: delete-srs-srId
+components:
+  schemas: {}

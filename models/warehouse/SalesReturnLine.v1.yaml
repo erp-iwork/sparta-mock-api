@@ -15,129 +15,15 @@ properties:
     type: string
   remarks:
     type: string
-  sales_return:
-    title: SalesReturn
-    type: object
-    properties:
-      id:
-        type: string
-      document_no:
-        type: number
-      sales_order_no:
-        type: number
-      received_by:
-        type: string
-      posting_date:
-        type: string
-      remarks:
-        type: string
-      siv:
-        title: SIV
-        type: object
-        properties:
-          id:
-            type: string
-          document_number:
-            type: number
-          sales_order_no:
-            type: number
-          purchase_return_no:
-            type: number
-          issued_by:
-            type: string
-          posting_date:
-            type: string
-          remarks:
-            type: string
-          sr:
-            title: SR
-            type: object
-            properties:
-              id:
-                type: string
-              document_number:
-                type: number
-              requested_by:
-                type: string
-              requested_date:
-                type: string
-              approved_by:
-                type: string
-              approved_date:
-                type: string
-              approve_status:
-                type: string
-              remarks:
-                type: string
-              warehouse:
-                $ref: '#/properties/sales_return/properties/siv/properties/warehouse'
-          warehouse:
-            title: Warehouse
-            type: object
-            properties:
-              id:
-                type: string
-              code:
-                type: string
-              name:
-                type: string
-              location:
-                title: Location
-                type: object
-                properties:
-                  id:
-                    type: string
-                  code:
-                    type: string
-                  name:
-                    type: string
-                  country:
-                    type: string
-                  state:
-                    type: string
-              remarks:
-                type: string
   item:
-    title: Item
-    type: object
-    properties:
-      id:
-        type: string
-      number:
-        type: number
-      name:
-        type: string
-      category:
-        title: ItemCategory
-        type: object
-        properties:
-          id:
-            type: string
-          name:
-            type: string
-      unit:
-        type: string
-      invintory_qty:
-        type: number
-      qty_on_purch_order:
-        type: number
-      qty_on_prod_order:
-        type: number
-      qty_on_sales_order:
-        type: number
-      isBlocked:
-        type: boolean
-      costing_method:
-        type: string
-      unit_price:
-        type: number
-      gen_prod_posting_group:
-        type: string
-      vat_prod_posting_group:
-        type: string
-      inventory_posting_group:
-        type: string
-      sales_price:
-        type: number
-      remarks:
-        type: string
+    $ref: ./Item.v1.yaml
+  from_warehouse:
+    $ref: ./Warehouse.v1.yaml
+  unit_measure:
+    $ref: ./UnitMeasurement.v1.yaml
+  unit_price:
+    type: string
+  amount_excl_vat:
+    type: string
+  from_bin:
+    $ref: ./Bin.v1.yaml

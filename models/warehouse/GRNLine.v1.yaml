@@ -23,3 +23,5 @@ properties:
     type: string
   unit_price:
     type: string
+  grn:
+    $ref: ./GRN.v1.yaml

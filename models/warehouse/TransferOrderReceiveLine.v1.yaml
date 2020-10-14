@@ -23,3 +23,5 @@ properties:
     $ref: ./Bin.v1.yaml
   to_bin:
     $ref: ./Bin.v1.yaml
+  transferOrderReceive:
+    $ref: ./TransferOrderReceive.v1.yaml

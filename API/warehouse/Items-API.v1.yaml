@@ -18,6 +18,58 @@ paths:
                 type: array
                 items:
                   $ref: ../../models/warehouse/Item.v1.yaml
+              examples:
+                example-1:
+                  value:
+                    - id: string
+                      number: 0
+                      name: string
+                      category:
+                        id: string
+                        name: string
+                        code: string
+                        remarks: string
+                      basic_unit_of_measure:
+                        id: string
+                        code: string
+                        name: string
+                        remarks: string
+                      invintory_qty: 0
+                      qty_on_purch_order: 0
+                      qty_on_prod_order: 0
+                      qty_on_sales_order: 0
+                      isBlocked: true
+                      costing_method: string
+                      unit_cost: 0
+                      gen_prod_posting_group: string
+                      vat_prod_posting_group: string
+                      inventory_posting_group: string
+                      sales_price: 0
+                      remarks: string
+                      warehouse:
+                        id: string
+                        code: string
+                        name: string
+                        location:
+                          id: string
+                          code: string
+                          name: string
+                          country: string
+                          state: string
+                        remarks: string
+                        bin:
+                          id: string
+                          code: string
+                          name: string
+                          remarks: string
+                      bin:
+                        id: string
+                        code: string
+                        name: string
+                        remarks: string
+            application/xml:
+              schema:
+                $ref: ../../models/warehouse/Item.v1.yaml
       operationId: get-items
     post:
       summary: create item

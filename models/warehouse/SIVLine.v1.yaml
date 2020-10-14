@@ -19,3 +19,5 @@ properties:
     $ref: ./Item.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
+  siv:
+    $ref: ./SIV.v1.yaml

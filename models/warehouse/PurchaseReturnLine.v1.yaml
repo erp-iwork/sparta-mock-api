@@ -21,3 +21,5 @@ properties:
     $ref: ./Warehouse.v1.yaml
   from_bin:
     $ref: ./Bin.v1.yaml
+  purchaseReturn:
+    $ref: ./PurchaseReturn.v1.yaml

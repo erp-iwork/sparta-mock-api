@@ -27,3 +27,5 @@ properties:
     type: string
   from_bin:
     $ref: ./Bin.v1.yaml
+  salesReturn:
+    $ref: ./SalesReturn.v1.yaml

@@ -17,3 +17,5 @@ properties:
     $ref: ./Item.v1.yaml
   unit_measure:
     $ref: ./UnitMeasurement.v1.yaml
+  sr:
+    $ref: ./SR.v1.yaml

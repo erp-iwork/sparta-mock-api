@@ -29,3 +29,5 @@ properties:
     type: string
   bin:
     $ref: ./Bin.v1.yaml
+  updated_at:
+    type: string

@@ -21,3 +21,5 @@ properties:
     $ref: ./Bin.v1.yaml
   siv:
     $ref: ./SIV.v1.yaml
+  watehouse:
+    $ref: ./Warehouse.v1.yaml

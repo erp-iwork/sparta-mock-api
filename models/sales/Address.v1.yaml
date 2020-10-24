@@ -1,0 +1,19 @@
+title: Address
+type: object
+properties:
+  id:
+    type: string
+  country:
+    type: string
+  region:
+    type: string
+  city:
+    type: string
+  postal_code:
+    type: string
+  is_head_office:
+    type: boolean
+  office_telephone_no:
+    type: string
+  remarks:
+    type: string

@@ -1,0 +1,35 @@
+title: SalesOrder
+type: object
+properties:
+  document_number:
+    type: string
+  sales_quote_number:
+    type: string
+  order_date:
+    type: string
+  customer_no:
+    type: string
+  customer_name:
+    type: string
+  sales_region:
+    type: string
+  sales_person:
+    type: string
+  posting_date:
+    type: string
+  due_date:
+    type: string
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+  status:
+    type: string
+  last_modified_date:
+    type: string
+  remarks:
+    type: string
+  lines:
+    type: array
+    items:
+      $ref: ./SalesOrderLine.v1.yaml

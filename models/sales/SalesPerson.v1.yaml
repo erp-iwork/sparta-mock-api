@@ -1,0 +1,11 @@
+title: SalesPerson
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  remarks:
+    type: string
+  last_modified_date:
+    type: string

@@ -1,0 +1,31 @@
+title: Customer
+type: object
+properties:
+  id:
+    type: string
+  number:
+    type: string
+  type:
+    type: string
+  name:
+    type: string
+  tin_number:
+    type: string
+  currency:
+    type: string
+  last_modified_date:
+    type: string
+  customer_posting_group:
+    type: string
+  credit_limit:
+    type: string
+  remarks:
+    type: string
+  addresses:
+    type: array
+    items:
+      $ref: ./Address.v1.yaml
+  contacts:
+    type: array
+    items:
+      $ref: ./Contact.v1.yaml

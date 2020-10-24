@@ -1,0 +1,21 @@
+title: SalesQuoteLine
+type: object
+properties:
+  item_category_code:
+    type: string
+  item_no:
+    type: string
+  item_name:
+    type: string
+  quantity:
+    type: string
+  unit_measure:
+    type: string
+  unit_price:
+    type: string
+  net_amount:
+    type: string
+  currency:
+    type: string
+  remarks:
+    type: string

@@ -11,8 +11,5 @@ properties:
     $ref: ./Location.v1.yaml
   remarks:
     type: string
-  lastModified:
-    type: string
-    format: date
-  bin:
+  is_bin_mandatory:
     $ref: ./Bin.v1.yaml

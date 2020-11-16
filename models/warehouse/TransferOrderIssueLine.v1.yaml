@@ -5,23 +5,21 @@ properties:
     type: string
   qty_requested:
     type: number
-  qty_to_issued:
-    type: number
   qty_issued:
     type: number
-  posting_date:
-    type: string
   remarks:
     type: string
   item:
     $ref: ./Item.v1.yaml
   to_warehouse:
     $ref: ./Warehouse.v1.yaml
-  unit_measure:
+  unit_of_measurement:
     type: string
   from_bin:
     $ref: ./Bin.v1.yaml
   to_bin:
     $ref: ./Bin.v1.yaml
-  transferOrderIssue:
+  transfer_order_issue:
     $ref: ./TransferOrderIssue.v1.yaml
+  from_warehouse:
+    type: string

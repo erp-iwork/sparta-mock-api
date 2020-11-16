@@ -17,7 +17,13 @@ properties:
     type: array
     items:
       $ref: ./SalesReturnLine.v1.yaml
-  status:
-    type: string
   customer:
     $ref: ../Customer.v1.yaml
+  siv_no:
+    type: string
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+  approved_status:
+    type: string

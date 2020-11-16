@@ -7,8 +7,6 @@ properties:
     type: number
   qty_received:
     type: number
-  qty_to_issue:
-    type: number
   qty_issued:
     type: number
   posting_date:
@@ -19,7 +17,7 @@ properties:
     $ref: ./Item.v1.yaml
   from_warehouse:
     $ref: ./Warehouse.v1.yaml
-  unit_measure:
+  unit_of_measurment:
     $ref: ./UnitMeasurement.v1.yaml
   unit_price:
     type: string
@@ -27,5 +25,7 @@ properties:
     type: string
   from_bin:
     $ref: ./Bin.v1.yaml
-  salesReturn:
+  sales_return_header:
     $ref: ./SalesReturn.v1.yaml
+  tax:
+    type: string

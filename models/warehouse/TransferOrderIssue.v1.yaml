@@ -17,17 +17,9 @@ properties:
     type: array
     items:
       $ref: ./TransferOrderIssueLine.v1.yaml
-  items:
-    $ref: ./TransferOrderIssueLine.v1.yaml
   approved_by:
     type: string
   approved_date:
     type: string
   approve_status:
-    type: string
-  from_warehouse:
-    $ref: ./Warehouse.v1.yaml
-  to_warehouse:
-    $ref: ./Warehouse.v1.yaml
-  updated_at:
     type: string

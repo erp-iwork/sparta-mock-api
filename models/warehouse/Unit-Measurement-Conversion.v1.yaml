@@ -11,3 +11,5 @@ properties:
     $ref: ./warehouse/UnitMeasurement.v1.yaml
   amount:
     type: number
+  remarks:
+    type: string

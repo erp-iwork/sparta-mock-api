@@ -1,0 +1,39 @@
+title: PurchaseRequisition
+type: object
+properties:
+  id:
+    type: string
+  document_number:
+    type: string
+  request_date:
+    type: string
+  order_date:
+    type: string
+  vendor:
+    $ref: ./Vendor.v1.yaml
+  request_purpose:
+    type: string
+  requester_department:
+    type: string
+  requested_by:
+    type: string
+  prepared_by:
+    type: string
+  purchase_type:
+    $ref: ./PurchaseType.v1.yaml
+  posting_date:
+    type: string
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+  purchaser:
+    type: string
+  approved_status:
+    type: string
+  remarks:
+    type: string
+  purchase_requisition_lines:
+    type: array
+    items:
+      $ref: ./PurchaseRequisitionLine.v1.yaml

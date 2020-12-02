@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: purchase-type
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchase-type:
+    get:
+      summary: get all
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/PurchaseType.v1.yaml
+      operationId: get-purchase-type
+    post:
+      summary: create a purchase type
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseType.v1.yaml
+      operationId: post-purchase-type
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseType.v1.yaml
+  /purchase-type/purchaseTypeId:
+    get:
+      summary: get a purchase type
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseType.v1.yaml
+      operationId: get-purchase-type-purchaseTypeId
+    put:
+      summary: update purchase type
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseType.v1.yaml
+      operationId: put-purchase-type-purchaseTypeId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseType.v1.yaml
+    delete:
+      summary: remove a purchase type
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseType.v1.yaml
+      operationId: delete-purchase-type-purchaseTypeId
+components:
+  schemas: {}

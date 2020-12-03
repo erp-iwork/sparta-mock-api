@@ -5,9 +5,17 @@ properties:
     type: string
   code:
     type: string
+    enum:
+      - Bin 1
+      - Bin 2
+      - Bin 3
   name:
     type: string
-  warehose:
+  warehouse:
     $ref: ./Warehouse.v1.yaml
   remarks:
     type: string
+  lastModified:
+    type: string
+    format: date
+description: ''

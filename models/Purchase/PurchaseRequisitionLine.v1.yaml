@@ -1,0 +1,38 @@
+title: PurchseRequisitionLine
+type: object
+properties:
+  id:
+    type: integer
+  item_category:
+    type: string
+    enum:
+      - Category 1
+      - Category 2
+      - Category 3
+  item_no:
+    type: string
+    enum:
+      - Item 001
+      - Item 002
+      - Item 003
+  item_name:
+    type: string
+  quantity:
+    type: integer
+  uom:
+    type: string
+    enum:
+      - Gram
+      - Kg
+      - Lt.
+  unit_price:
+    type: integer
+  net_amount:
+    type: integer
+  currency:
+    type: string
+    enum:
+      - Birr
+      - USD
+  remarks:
+    type: string

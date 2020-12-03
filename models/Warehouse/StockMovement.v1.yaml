@@ -1,0 +1,34 @@
+title: StockMovement
+type: object
+x-tags:
+  - Stock Movement
+properties:
+  id:
+    type: integer
+  item_number:
+    type: number
+  item_name:
+    type: string
+  posting_date:
+    type: string
+    format: date
+  transaction_type:
+    type: string
+  purchase_receive_quantity:
+    type: integer
+  sales_issue_order_quantity:
+    type: integer
+  positive_adj_quantity:
+    type: integer
+  negative_adj_quantity:
+    type: integer
+  transfer_receive_quantity:
+    type: integer
+  transfer_issue_quantity:
+    type: integer
+  purchase_return_quantity:
+    type: integer
+  sales_return_quantity:
+    type: integer
+  consumption_quantity:
+    type: integer

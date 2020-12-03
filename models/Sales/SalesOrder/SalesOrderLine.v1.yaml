@@ -1,0 +1,31 @@
+title: SalesOrderLine.
+type: object
+properties:
+  id:
+    type: string
+  item_category:
+    type: string
+  item_name:
+    type: string
+  quantity:
+    type: integer
+  unit_measure:
+    type: string
+  discount_method:
+    type: string
+  unit_price:
+    type: number
+  discount:
+    type: number
+  price_after_discount:
+    type: number
+  amount_excluding_vat:
+    type: number
+  vat:
+    type: number
+  total_amount:
+    type: number
+  currency:
+    type: string
+  remarks:
+    type: string

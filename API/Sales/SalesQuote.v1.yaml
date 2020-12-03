@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: SalesQuote
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /sales-quotes/:
+    get:
+      summary: Fetch all Sales Quotes
+      tags:
+        - Sales Quote
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+      operationId: get-sales-quote
+    post:
+      summary: Create Sales Quote
+      tags:
+        - Sales Quote
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+      operationId: post-sales-quote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+    parameters: []
+  '/sales-quotes/{id}/':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Fetchs a sales quote
+      tags:
+        - Sales Quote
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+      operationId: get-sales-quotes-id
+    put:
+      summary: Updates sales quote
+      tags:
+        - Sales Quote
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+      operationId: put-sales-quotes-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+    delete:
+      summary: Remove sales quote
+      tags:
+        - Sales Quote
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Sales/SalesQuote/SalesQuote.v1.yaml
+      operationId: delete-sales-quotes-id
+components:
+  schemas: {}

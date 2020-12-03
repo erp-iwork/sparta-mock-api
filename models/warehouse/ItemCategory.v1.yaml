@@ -6,6 +6,10 @@ properties:
     type: string
   name:
     type: string
+    enum:
+      - Category 1
+      - Category 2
+      - Category 3
   code:
     type: string
   remarks:

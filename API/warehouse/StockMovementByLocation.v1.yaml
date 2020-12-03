@@ -10,7 +10,15 @@ paths:
       summary: Gets a list of stock movement by location
       tags:
         - Stock Movement
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Warehouse/StockMovementByLocation.v1.yaml
       operationId: get-stock-movement-by-location
 components:
   schemas: {}

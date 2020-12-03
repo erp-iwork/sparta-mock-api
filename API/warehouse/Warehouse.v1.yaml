@@ -19,7 +19,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/Warehouse.v1.yaml
+                  $ref: ../../models/Warehouse/Warehouse.v1.yaml
       operationId: get-warehouse
     post:
       summary: Creates warehouse

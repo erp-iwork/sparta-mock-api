@@ -1,0 +1,52 @@
+title: PurchaseOrderLine
+type: object
+x-tags:
+  - Purchase
+properties:
+  id:
+    type: number
+  itemCategory:
+    type: string
+    enum:
+      - Category 1
+      - Category 2
+      - Category 3
+  itemNumber:
+    type: string
+    enum:
+      - Item 001
+      - Item 002
+      - Item 003
+  itemName:
+    type: string
+  quantity:
+    type: integer
+  qty_to_receive:
+    type: integer
+  qty_received:
+    type: integer
+  uom:
+    type: string
+    enum:
+      - Kg
+      - Gram
+      - Lt.
+  unit_price:
+    type: integer
+  discount:
+    type: integer
+  discountAmount:
+    type: integer
+  netAmount:
+    type: integer
+  vat:
+    type: integer
+  totalAmount:
+    type: integer
+  currency:
+    type: string
+    enum:
+      - Birr
+      - USD
+  remarks:
+    type: string

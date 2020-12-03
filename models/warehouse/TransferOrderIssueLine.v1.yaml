@@ -5,7 +5,7 @@ properties:
     type: string
   qty_requested:
     type: number
-  qty_to_issued:
+  qty_remaining:
     type: number
   qty_issued:
     type: number
@@ -18,8 +18,10 @@ properties:
   to_warehouse:
     $ref: ./Warehouse.v1.yaml
   unit_measure:
-    type: string
+    $ref: ./UnitMeasurement.v1.yaml
   from_bin:
     $ref: ./Bin.v1.yaml
   to_bin:
     $ref: ./Bin.v1.yaml
+  item_category:
+    $ref: ./ItemCategory.v1.yaml

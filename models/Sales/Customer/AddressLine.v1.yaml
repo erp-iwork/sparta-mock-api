@@ -1,0 +1,21 @@
+title: AddressLine
+type: object
+properties:
+  id:
+    type: string
+  country:
+    type: string
+  region:
+    type: string
+  city:
+    type: string
+  currency:
+    type: string
+  po_box:
+    type: string
+  is_head_office:
+    type: boolean
+  office_telephone_number:
+    type: string
+  remarks:
+    type: string

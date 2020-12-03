@@ -1,0 +1,40 @@
+title: SalesQuote
+type: object
+properties:
+  id:
+    type: string
+  document_number:
+    type: string
+  sales_quote_date:
+    type: string
+    format: date
+  order_date:
+    type: string
+    format: date
+  customer_name:
+    type: string
+  customer_number:
+    type: string
+  sales_region:
+    type: string
+  sales_person:
+    type: string
+  due_date:
+    type: string
+    format: date
+  posted_date:
+    type: string
+    format: date
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+    format: date
+  status:
+    type: string
+  remarks:
+    type: string
+  sales_quote_lines:
+    type: array
+    items:
+      $ref: ./SalesQuoteLine.v1.yaml

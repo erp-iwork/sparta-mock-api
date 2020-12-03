@@ -1,0 +1,27 @@
+title: Customer
+type: object
+properties:
+  id:
+    type: string
+  document_number:
+    type: string
+  customer_name:
+    type: string
+  tin_number:
+    type: string
+  currency:
+    type: string
+  customer_posting_group:
+    type: string
+  credit_limit:
+    type: number
+  remarks:
+    type: string
+  contact_line:
+    type: array
+    items:
+      $ref: ./ContactLine.v1.yaml
+  address_line:
+    type: array
+    items:
+      $ref: ./AddressLine.v1.yaml

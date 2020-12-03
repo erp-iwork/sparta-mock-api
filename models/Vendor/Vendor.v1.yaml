@@ -1,0 +1,26 @@
+title: Vendor
+type: object
+properties:
+  id:
+    type: integer
+  vendorType:
+    type: string
+  vendorName:
+    type: string
+  vendor_posting_group:
+    type: integer
+  tinNumber:
+    type: integer
+  currency:
+    type: string
+  remarks:
+    type: string
+  vendor_line:
+    type: array
+    items:
+      $ref: ./VendorLine.v1.yaml
+  vendorNumber:
+    type: integer
+  lastModified:
+    type: string
+    format: date

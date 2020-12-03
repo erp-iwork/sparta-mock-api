@@ -21,3 +21,8 @@ properties:
     $ref: ./Bin.v1.yaml
   warehouse:
     $ref: ./Warehouse.v1.yaml
+  entry_type:
+    type: string
+  lastModified:
+    type: string
+    format: date

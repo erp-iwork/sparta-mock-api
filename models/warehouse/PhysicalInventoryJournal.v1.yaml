@@ -25,3 +25,6 @@ properties:
     $ref: ./Bin.v1.yaml
   basic_unit_of_measure:
     type: string
+  lastModified:
+    type: string
+    format: date

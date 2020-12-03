@@ -1,0 +1,64 @@
+title: PurchaseOrder
+type: object
+description: ''
+properties:
+  id:
+    type: integer
+  doc_number:
+    type: string
+  pr_number:
+    type: string
+  order_date:
+    type: string
+    format: date
+  vendor_number:
+    type: string
+    enum:
+      - Vendor 001
+      - Vendor 002
+      - Vendor 003
+      - Vendor 004
+      - Vendor 005
+  vendor_name:
+    type: string
+  requestor_dept:
+    type: string
+    enum:
+      - HR
+      - Sales
+      - IT
+  purchaseType:
+    type: string
+    enum:
+      - Type 1
+      - Type 2
+  postingDate:
+    type: string
+    format: date
+  expectedDeliveryDate:
+    type: string
+    format: date
+  approvedBy:
+    type: string
+    enum:
+      - Admin
+      - HR
+      - Finance
+  approvedDate:
+    type: string
+    format: date
+  status:
+    type: string
+    enum:
+      - Drafted
+      - Posted
+      - Approved
+  lastModified:
+    type: string
+    format: date
+  remarks:
+    type: string
+  lines:
+    type: array
+    items:
+      $ref: ./PurchaseOrderLine.v1.yaml

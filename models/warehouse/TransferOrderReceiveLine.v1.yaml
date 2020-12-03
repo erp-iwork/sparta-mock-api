@@ -3,14 +3,10 @@ type: object
 properties:
   id:
     type: string
-  qty_requested:
-    type: number
-  qty_to_receive:
+  qty_issued:
     type: number
   qty_received:
     type: number
-  posting_date:
-    type: string
   remarks:
     type: string
   item:
@@ -23,3 +19,11 @@ properties:
     $ref: ./Bin.v1.yaml
   to_bin:
     $ref: ./Bin.v1.yaml
+  item_category:
+    type: string
+  qty_remaining:
+    type: number
+  from_warehouse:
+    $ref: ./Warehouse.v1.yaml
+  qty_requested:
+    type: number

@@ -1,0 +1,15 @@
+title: VendorLine
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  telephone_number:
+    type: string
+  mobile_number:
+    type: string
+  email:
+    type: string
+  remarks:
+    type: string

@@ -7,7 +7,7 @@ servers:
 paths:
   /purchase-returns:
     get:
-      summary: get Purchase Returns
+      summary: Fetch Purchase Returns
       tags: []
       responses:
         '200':
@@ -17,7 +17,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+                  $ref: ../../models/Warehouse/PurchaseReturn.v1.yaml
       operationId: get-purchase-returns
     post:
       summary: create Purchase Return
@@ -28,7 +28,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/warehouse/PurchaseReturn.v1.yaml
+                $ref: ../../models/Warehouse/PurchaseReturn.v1.yaml
         '400':
           description: Bad Request
       operationId: post-purchase-returns

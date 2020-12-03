@@ -5,6 +5,10 @@ properties:
     type: string
   code:
     type: string
+    enum:
+      - Warehouse 1
+      - Warehouse 2
+      - Warehouse 3
   name:
     type: string
   location:
@@ -16,3 +20,4 @@ properties:
     format: date
   bin:
     $ref: ./Bin.v1.yaml
+description: ''

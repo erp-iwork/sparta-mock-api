@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/warehouse/PhysicalInventoryJournal.v1.yaml
+                  $ref: ../../models/Warehouse/PhysicalInventoryJournal.v1.yaml
       operationId: get-physical-inverntory-journal
       description: Gets a list of physical inventory journals
     post:
@@ -31,7 +31,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/warehouse/PhysicalInventoryJournal.v1.yaml
+                $ref: ../../models/Warehouse/PhysicalInventoryJournal.v1.yaml
       operationId: post-physical-inverntory-journal
       description: Creates a single physical inventory journal
       requestBody:

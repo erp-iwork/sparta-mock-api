@@ -7,7 +7,7 @@ servers:
 paths:
   /items:
     get:
-      summary: get items
+      summary: Fetch Items
       tags: []
       responses:
         '200':

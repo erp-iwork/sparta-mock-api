@@ -1,0 +1,84 @@
+openapi: '3.0.0'
+info:
+  title: Sales-Regions-api
+  version: '1.0'
+servers:
+- url: http://localhost:3000
+paths:
+  /sales-region:
+    get:
+      summary: get all sales regions
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/sales/SalesRegion.v1.yaml
+      operationId: get-sales-region
+    post:
+      summary: create a sales region
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesRegion.v1.yaml
+      operationId: post-sales-region
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesRegion.v1.yaml
+  '/sales-region/{salesRegionId}':
+    parameters:
+      - schema:
+          type: string
+        name: salesRegionId
+        in: path
+        required: true
+    get:
+      summary: get a sales region
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesRegion.v1.yaml
+      operationId: get-sales-region-salesRegionId
+    put:
+      summary: update a sales perosn
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesRegion.v1.yaml
+      operationId: put-sales-region-salesRegionId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesRegion.v1.yaml
+    delete:
+      summary: remove a sales region
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesRegion.v1.yaml
+      operationId: delete-sales-region-salesRegionId
+components:
+  schemas: {}

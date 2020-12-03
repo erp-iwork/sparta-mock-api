@@ -17,15 +17,11 @@ properties:
     type: string
   remarks:
     type: string
-  warehouse:
-    $ref: ./Warehouse.v1.yaml
   sr_lines:
     type: array
     items:
       $ref: ./SRLine.v1.yaml
-  type_of_issue:
-    type: string
   status:
     type: string
-  bin:
-    $ref: ./Bin.v1.yaml
+  posting_date:
+    type: string

@@ -12,7 +12,7 @@ properties:
     type: number
   remarks:
     type: string
-  new_bin_code:
+  new_bin:
     type: string
   item:
     $ref: ./Item.v1.yaml

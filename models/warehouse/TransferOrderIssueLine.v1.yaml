@@ -9,8 +9,6 @@ properties:
     type: number
   qty_issued:
     type: number
-  posting_date:
-    type: string
   remarks:
     type: string
   item:

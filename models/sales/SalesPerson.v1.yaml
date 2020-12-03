@@ -1,14 +1,11 @@
-title: UnitMeasurement
+title: SalesPerson
 type: object
-x-tags:
-  - UOM
-description: ''
 properties:
   id:
-    type: integer
-  code:
     type: string
   name:
     type: string
   remarks:
+    type: string
+  last_modified_date:
     type: string

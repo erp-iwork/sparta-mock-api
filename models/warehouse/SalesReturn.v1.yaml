@@ -19,6 +19,7 @@ properties:
     type: array
     items:
       $ref: ./SalesReturnLine.v1.yaml
+<<<<<<< HEAD
   status:
     type: string
     enum:
@@ -29,6 +30,12 @@ properties:
     $ref: ../Finance/Customer.v1.yaml
   siv:
     $ref: ./SIV.v1.yaml
+=======
+  customer:
+    $ref: ../Customer.v1.yaml
+  siv_no:
+    type: string
+>>>>>>> 6a5a601bd37c091de26660b6c9a6c011333f45c4
   approved_by:
     type: string
   approved_date:

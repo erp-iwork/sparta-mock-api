@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: purchase-requisitions
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchase-requisitions:
+    get:
+      summary: get all pr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: get-purchase-requisitions
+    post:
+      summary: create a pr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: post-purchase-requisitions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+  '/purchase-requisitions/{purchaseRequisitionId}':
+    parameters:
+      - schema:
+          type: string
+        name: purchaseRequisitionId
+        in: path
+        required: true
+    get:
+      summary: get a pr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: get-purchase-requisitions-purchaseRequisitionId
+    put:
+      summary: update a pr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: put-purchase-requisitions-purchaseRequisitionId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+    delete:
+      summary: remove a pr
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: delete-purchase-requisitions-purchaseRequisitionId
+components:
+  schemas: {}

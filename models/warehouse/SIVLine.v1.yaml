@@ -5,8 +5,6 @@ properties:
     type: string
   qty_requested:
     type: number
-  qty_to_issued:
-    type: number
   unit_price:
     type: number
   total_amount:
@@ -19,3 +17,11 @@ properties:
     $ref: ./Item.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
+  siv_header:
+    $ref: ./SIV.v1.yaml
+  watehouse:
+    $ref: ./Warehouse.v1.yaml
+  qty_issued:
+    type: string
+  unit_measure:
+    type: string

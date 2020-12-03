@@ -15,7 +15,11 @@ properties:
     $ref: ./EntryType.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
-  basic_unit_of_measure:
+  unit_of_measure:
     $ref: ./UnitMeasurement.v1.yaml
   warehouse:
     $ref: ./Warehouse.v1.yaml
+  amount:
+    type: string
+  unit_price:
+    type: string

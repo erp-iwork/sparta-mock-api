@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Sales-Quote-api
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /sales-quote:
+    get:
+      summary: get all sales quote
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/sales/SalesQuote.v1.yaml
+      operationId: get-sales-quote
+    post:
+      summary: create a sales quote
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesQuote.v1.yaml
+      operationId: post-sales-quote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesQuote.v1.yaml
+  '/sales-quote/{salesQuote':
+    get:
+      summary: get a sales qoute
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesQuote.v1.yaml
+      operationId: get-sales-quote-salesQuote
+    put:
+      summary: update a sales qoute
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesQuote.v1.yaml
+      operationId: put-sales-quote-salesQuote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesQuote.v1.yaml
+    delete:
+      summary: remove a sales quote
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesQuote.v1.yaml
+      operationId: delete-sales-quote-salesQuote
+components:
+  schemas: {}

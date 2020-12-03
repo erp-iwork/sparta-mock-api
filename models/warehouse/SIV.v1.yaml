@@ -5,18 +5,14 @@ properties:
     type: string
   document_number:
     type: number
-  sales_order_no:
-    type: number
   issued_by:
     type: string
   posting_date:
     type: string
   remarks:
     type: string
-  sr:
+  store_requistion:
     $ref: ./SR.v1.yaml
-  warehouse:
-    $ref: ./Warehouse.v1.yaml
   siv_lines:
     type: array
     items:
@@ -27,5 +23,5 @@ properties:
     type: string
   approved_status:
     type: string
-  bin:
-    $ref: ./Bin.v1.yaml
+  updated_at:
+    type: string

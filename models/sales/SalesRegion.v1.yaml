@@ -1,13 +1,11 @@
-title: Location
+title: SalesRegion
 type: object
 properties:
   id:
     type: string
-  code:
-    type: string
   name:
     type: string
-  country:
+  remarks:
     type: string
-  state:
+  last_modified_date:
     type: string

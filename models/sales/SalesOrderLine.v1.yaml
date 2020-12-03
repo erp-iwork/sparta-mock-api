@@ -1,0 +1,33 @@
+title: SalesOrderLine
+type: object
+properties:
+  item_category_code:
+    type: string
+  item_no:
+    type: string
+  item_name:
+    type: string
+  quantity:
+    type: string
+  remaining_amount:
+    type: string
+  quantity_issued:
+    type: string
+  unit_measure:
+    type: string
+  unit_price:
+    type: string
+  discount:
+    type: string
+  discount_amount:
+    type: string
+  net_amount:
+    type: string
+  vat:
+    type: string
+  total_amount:
+    type: string
+  currency:
+    type: string
+  remarks:
+    type: string

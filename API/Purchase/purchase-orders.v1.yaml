@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: purchase-orders
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchase-orders:
+    get:
+      summary: get all purchase orders
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+      operationId: get-purchase-orders
+    post:
+      summary: create a purchase order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+      operationId: post-purchase-orders
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+  '/purchase-orders/{purchaseOrderId}':
+    parameters:
+      - schema:
+          type: string
+        name: purchaseOrderId
+        in: path
+        required: true
+    get:
+      summary: get a purchase order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+      operationId: get-purchase-orders-purchaseOrderId
+    put:
+      summary: update a purchase order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+      operationId: put-purchase-orders-purchaseOrderId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+    delete:
+      summary: remove a purchase order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseOrder.v1.yaml
+      operationId: delete-purchase-orders-purchaseOrderId
+components:
+  schemas: {}

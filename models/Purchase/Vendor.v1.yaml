@@ -1,0 +1,23 @@
+title: Vendor
+type: object
+properties:
+  id:
+    type: string
+  number:
+    type: string
+  name:
+    type: string
+  tin_number:
+    type: string
+  remarks:
+    type: string
+  vendor_posting_group:
+    type: string
+  general_business_posting_group:
+    type: string
+  vat_posting_group:
+    type: string
+  contact:
+    $ref: ./Contact.v1.yaml
+  address:
+    $ref: ./Address.v1.yaml

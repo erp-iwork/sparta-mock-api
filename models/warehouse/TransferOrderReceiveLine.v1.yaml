@@ -13,12 +13,13 @@ properties:
     $ref: ./Item.v1.yaml
   to_warehouse:
     $ref: ./Warehouse.v1.yaml
-  unit_measure:
+  unit_of_measurement:
     $ref: ./UnitMeasurement.v1.yaml
   from_bin:
     $ref: ./Bin.v1.yaml
   to_bin:
     $ref: ./Bin.v1.yaml
+<<<<<<< HEAD
   item_category:
     type: string
   qty_remaining:
@@ -27,3 +28,13 @@ properties:
     $ref: ./Warehouse.v1.yaml
   qty_requested:
     type: number
+=======
+  transfer_order_receive_header:
+    $ref: ./TransferOrderReceive.v1.yaml
+  remaining_qty:
+    type: string
+  qty_issued:
+    type: string
+  from_warehouse:
+    type: string
+>>>>>>> 6a5a601bd37c091de26660b6c9a6c011333f45c4

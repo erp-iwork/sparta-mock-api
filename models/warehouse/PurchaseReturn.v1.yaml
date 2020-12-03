@@ -21,16 +21,14 @@ properties:
     format: date
   remarks:
     type: string
-  grn:
-    $ref: ./GRN.v1.yaml
+  grn_no:
+    type: string
   purchase_return_lines:
     type: array
     items:
       $ref: ./PurchaseReturnLine.v1.yaml
   approved_status:
     type: string
-  from_warehouse:
-    $ref: ./Warehouse.v1.yaml
   vendor:
     $ref: ../Finance/Vendor.v1.yaml
   lastModified:

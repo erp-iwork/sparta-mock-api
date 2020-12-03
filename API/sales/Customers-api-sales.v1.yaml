@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Customers-api-sales
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /customers-sales:
+    get:
+      summary: get all customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/sales/Customer.v1.yaml
+      operationId: get-customers-sales
+    post:
+      summary: create a customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/Customer.v1.yaml
+      operationId: post-customers-sales
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/Customer.v1.yaml
+  '/customers-sales/{customerId}':
+    parameters:
+      - schema:
+          type: string
+        name: customerId
+        in: path
+        required: true
+    get:
+      summary: get a customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/Customer.v1.yaml
+      operationId: get-customers-sales-customerId
+    put:
+      summary: update a customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/Customer.v1.yaml
+      operationId: put-customers-sales-customerId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/Customer.v1.yaml
+    delete:
+      summary: remove a customer
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/Customer.v1.yaml
+      operationId: delete-customers-sales-customerId
+components:
+  schemas: {}

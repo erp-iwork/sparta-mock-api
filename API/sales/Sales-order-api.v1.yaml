@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Sales-order-api
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /sales-orders:
+    get:
+      summary: get all sales orders
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/sales/SalesOrder.v1.yaml
+      operationId: get-sales-orders
+    post:
+      summary: create a sales order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesOrder.v1.yaml
+      operationId: post-sales-orders
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesOrder.v1.yaml
+  '/sales-orders/{salesOrderId}':
+    parameters:
+      - schema:
+          type: string
+        name: salesOrderId
+        in: path
+        required: true
+    get:
+      summary: get a sales order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesOrder.v1.yaml
+      operationId: get-sales-orders-salesOrderId
+    put:
+      summary: update a sales order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesOrder.v1.yaml
+      operationId: put-sales-orders-salesOrderId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/sales/SalesOrder.v1.yaml
+    delete:
+      summary: remove a sales order
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/sales/SalesOrder.v1.yaml
+      operationId: delete-sales-orders-salesOrderId
+components:
+  schemas: {}

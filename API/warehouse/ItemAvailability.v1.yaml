@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/Item.v1.yaml
+                  $ref: ../../models/Warehouse/Item.v1.yaml
       operationId: get-item-availability
       description: Fetches all item availability
   '/item-availability/{id}':

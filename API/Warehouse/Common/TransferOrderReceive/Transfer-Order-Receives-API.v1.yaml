@@ -7,7 +7,7 @@ servers:
 paths:
   /transfer-order-receives:
     post:
-      summary: create Transfer Order Receive
+      summary: Create Transfer Order Receive
       tags: []
       responses:
         '200':
@@ -15,7 +15,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+                $ref: ../../../../models/Warehouse/TransferOrderReceive.v1.yaml
         '400':
           description: Bad Request
       operationId: post-transfer-order-receives
@@ -24,8 +24,9 @@ paths:
           application/json:
             schema:
               $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+      description: ''
     get:
-      summary: get Transfer Order Receives
+      summary: Get Transfer Order Receives
       tags: []
       responses:
         '200':
@@ -35,7 +36,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/TransferOrderReceive.v1.yaml
+                  $ref: ../../../../models/Warehouse/TransferOrderReceive.v1.yaml
       operationId: get-transfer-order-receives
   '/transfer-order-receives/{transferOrderReceiveId}':
     parameters:

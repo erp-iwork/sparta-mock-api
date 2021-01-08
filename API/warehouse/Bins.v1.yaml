@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/Bin.v1.yaml
+                  $ref: ../../models/Warehouse/Bin.v1.yaml
       operationId: get-bins
       description: ''
     post:

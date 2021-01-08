@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: vendors
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /vendors:
+    get:
+      summary: get all vendors
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/Vendor.v1.yaml
+      operationId: get-vendors
+    post:
+      summary: create a vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Vendor.v1.yaml
+      operationId: post-vendors
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/Vendor.v1.yaml
+  '/vendors/{vendorId}':
+    parameters:
+      - schema:
+          type: string
+        name: vendorId
+        in: path
+        required: true
+    get:
+      summary: get a vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Vendor.v1.yaml
+      operationId: get-vendors-vendorId
+    put:
+      summary: update a vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Vendor.v1.yaml
+      operationId: put-vendors-vendorId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/Vendor.v1.yaml
+    delete:
+      summary: remove a vendor
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Vendor.v1.yaml
+      operationId: delete-vendors-vendorId
+components:
+  schemas: {}

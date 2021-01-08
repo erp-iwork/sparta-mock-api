@@ -1,0 +1,89 @@
+openapi: 3.0.0
+info:
+  title: Vendor
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /vendor:
+    get:
+      summary: Fetches all vendors
+      tags:
+        - Vendor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Vendor/Vendor.v1.yaml
+      operationId: get-vendor
+    post:
+      summary: Create a new vendor
+      tags:
+        - Vendor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Vendor/Vendor.v1.yaml
+      operationId: post-vendor
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Vendor/Vendor.v1.yaml
+  '/vendors/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Gets a single vendor
+      tags:
+        - Vendor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Vendor/Vendor.v1.yaml
+      operationId: get-vendors-id
+    put:
+      summary: Updates a single vendor
+      tags:
+        - Vendor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Vendor/Vendor.v1.yaml
+      operationId: put-vendors-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Vendor/Vendor.v1.yaml
+    delete:
+      summary: Removes a single vendor
+      tags:
+        - Vendor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Vendor/Vendor.v1.yaml
+      operationId: delete-vendors-id
+components:
+  schemas: {}

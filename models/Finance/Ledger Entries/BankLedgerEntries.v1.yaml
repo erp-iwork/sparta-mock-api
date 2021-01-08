@@ -1,0 +1,26 @@
+title: BankLedgerEntries
+type: object
+properties:
+  id:
+    type: string
+  posting_date:
+    type: string
+    format: date
+  document_type:
+    type: string
+  ref_no:
+    type: number
+  journal_document_no:
+    type: number
+  account_number:
+    type: number
+  description:
+    type: string
+  debit:
+    type: number
+  credit:
+    type: number
+  balance:
+    type: number
+  remarks:
+    type: string

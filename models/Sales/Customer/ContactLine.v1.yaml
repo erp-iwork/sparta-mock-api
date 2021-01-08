@@ -1,0 +1,15 @@
+title: ContactLine
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  office_telephone_number:
+    type: string
+  mobile_number:
+    type: string
+  email:
+    type: string
+  remarks:
+    type: string

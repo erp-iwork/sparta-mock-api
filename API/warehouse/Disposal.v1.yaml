@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Disposal
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /disposals:
+    get:
+      summary: Get disposals
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/warehouse/Disposal.v1.yaml
+      operationId: get-disposals
+    post:
+      summary: create a disposal
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Disposal.v1.yaml
+      operationId: post-disposals
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Disposal.v1.yaml
+  '/disposals/{disposalId}':
+    parameters:
+      - schema:
+          type: string
+        name: disposalId
+        in: path
+        required: true
+    get:
+      summary: get a disposal
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Disposal.v1.yaml
+      operationId: get-disposals-disposalId
+    put:
+      summary: update a disposal
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Disposal.v1.yaml
+      operationId: put-disposals-disposalId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/warehouse/Disposal.v1.yaml
+    delete:
+      summary: remove a disposal
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/warehouse/Disposal.v1.yaml
+      operationId: delete-disposals-disposalId
+components:
+  schemas: {}

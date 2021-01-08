@@ -4,11 +4,12 @@ properties:
   id:
     type: string
   document_no:
-    type: number
+    type: string
   received_by:
     type: string
   posting_date:
     type: string
+    format: date
   remarks:
     type: string
   transfer_order_issue:
@@ -27,3 +28,6 @@ properties:
     type: string
   to_bin:
     type: string
+  updated_at:
+    type: string
+    format: date-time

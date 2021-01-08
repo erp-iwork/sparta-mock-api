@@ -1,0 +1,114 @@
+openapi: 3.0.0
+info:
+  title: PurchaseRequisition
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchase-requisitions:
+    get:
+      summary: Fetches all the PRs
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: get-purchase-requisition
+      description: ''
+    post:
+      summary: Create a PR
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: post-purchase-requisition
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+    parameters: []
+  '/purchase-requisitions/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Gets a single PR
+      tags:
+        - Purchase Requisition
+      responses: {}
+      operationId: get-purchase-requisitions-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+    put:
+      summary: Update single PR
+      tags:
+        - Purchase Requisition
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: put-purchase-requisitions-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+    delete:
+      summary: Remove single PR
+      tags:
+        - Purchase Requisition
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: delete-purchase-requisitions-id
+  '/purchase-requisitions/{id}/post':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    put:
+      summary: Update Status
+      tags:
+        - Purchase Requisition
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+      operationId: put-purchase-requisitions-id-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/PurchaseRequisition.v1.yaml
+components:
+  schemas: {}

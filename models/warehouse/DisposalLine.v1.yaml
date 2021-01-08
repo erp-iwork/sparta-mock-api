@@ -1,0 +1,33 @@
+title: DisposalLine
+type: object
+properties:
+  id:
+    type: string
+  qty_requested:
+    type: string
+  remaing_qty:
+    type: string
+  qty_issued:
+    type: string
+  tax:
+    type: string
+  total_amount:
+    type: string
+  unit_price:
+    type: string
+  amount_excl_vat:
+    type: string
+  posting_date:
+    type: string
+  remarks:
+    type: string
+  disposal_header:
+    $ref: ./Disposal.v1.yaml
+  item:
+    $ref: ./Item.v1.yaml
+  bin:
+    $ref: ./Bin.v1.yaml
+  warehouse:
+    $ref: ./Warehouse.v1.yaml
+  unit_of_measure:
+    $ref: ./UnitMeasurement.v1.yaml

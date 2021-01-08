@@ -1,23 +1,46 @@
 title: SalesReturn
 type: object
+description: ''
 properties:
   id:
     type: string
   document_no:
-    type: number
+    type: string
   sales_order_no:
     type: number
   received_by:
     type: string
   posting_date:
     type: string
+    format: date
   remarks:
     type: string
   sales_return_lines:
     type: array
     items:
       $ref: ./SalesReturnLine.v1.yaml
+<<<<<<< HEAD
   status:
     type: string
+    enum:
+      - Drafted
+      - Posted
+      - Approved
+  customer:
+    $ref: ../Finance/Customer.v1.yaml
+  siv:
+    $ref: ./SIV.v1.yaml
+=======
   customer:
     $ref: ../Customer.v1.yaml
+  siv_no:
+    type: string
+>>>>>>> 6a5a601bd37c091de26660b6c9a6c011333f45c4
+  approved_by:
+    type: string
+  approved_date:
+    type: string
+    format: date
+  lastModified:
+    type: string
+    format: date

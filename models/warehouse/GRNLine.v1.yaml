@@ -7,21 +7,19 @@ properties:
     type: number
   ordered_qty:
     type: number
-  qty_to_received:
-    type: number
   qty_received:
     type: number
   total_amount:
     type: number
-  posting_date:
-    type: string
   remarks:
     type: string
   item:
     $ref: ./Item.v1.yaml
   unit_measure:
-    type: string
+    $ref: ./UnitMeasurement.v1.yaml
   unit_price:
     type: string
-  grn:
+  grn_header:
     $ref: ./GRN.v1.yaml
+  remaining_qty:
+    type: string

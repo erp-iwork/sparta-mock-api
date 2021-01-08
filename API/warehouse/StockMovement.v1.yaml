@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/StockMovement.v1.yaml
+                  $ref: ../../models/Warehouse/StockMovement.v1.yaml
       operationId: get-stock-movement
       description: Get all the stock movement
   '/stock-movement/{id}':

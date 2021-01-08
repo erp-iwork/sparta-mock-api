@@ -1,0 +1,17 @@
+title: Address
+type: object
+properties:
+  id:
+    type: string
+  country:
+    type: string
+  region:
+    type: string
+  city:
+    type: string
+  pobox:
+    type: string
+  is_head_office:
+    type: string
+  remarks:
+    type: string

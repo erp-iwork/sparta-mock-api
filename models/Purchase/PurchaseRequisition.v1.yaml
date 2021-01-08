@@ -1,0 +1,72 @@
+title: PurchaseRequisition
+type: object
+x-tags:
+  - Purchase Requisition
+properties:
+  id:
+    type: integer
+  doc_number:
+    type: string
+  request_date:
+    type: string
+    format: date
+  order_date:
+    type: string
+    format: date
+  vendor_no:
+    type: string
+    enum:
+      - 1
+      - 2
+      - 3
+      - 4
+  vendor_name:
+    type: string
+  request_purpose:
+    type: string
+  requestor_dept:
+    type: string
+    enum:
+      - Sales
+      - Purchase
+      - Warehouse
+  requested_by:
+    type: string
+    enum:
+      - Admin
+      - Sales Person
+  prepared_by:
+    type: string
+  purchase_type:
+    type: string
+    enum:
+      - Purchase Type 1
+      - Purchase Type 2
+      - Purchase Type 3
+  posting_date:
+    type: string
+    format: date
+  approved_by:
+    type: string
+    enum:
+      - Admin
+      - Finance
+  approved_date:
+    type: string
+    format: date
+  status:
+    type: string
+    enum:
+      - Created
+      - Drafted
+      - Approved
+      - Posted
+  lastModified:
+    type: string
+    format: date
+  remarks:
+    type: string
+  line:
+    type: array
+    items:
+      $ref: ./PurchaseRequisitionLine.v1.yaml

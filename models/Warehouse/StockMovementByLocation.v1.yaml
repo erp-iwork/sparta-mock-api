@@ -1,0 +1,34 @@
+title: StockMovementByLocation
+type: object
+x-tags:
+  - Stock Movement
+properties:
+  id:
+    type: integer
+  item:
+    $ref: ./Item.v1.yaml
+  warehouse:
+    $ref: ./Warehouse.v1.yaml
+  posting_date:
+    type: string
+    format: date
+  transaction_type:
+    type: string
+  purchase_receive_qty:
+    type: integer
+  sale_issue_order_qty:
+    type: integer
+  postive_adj_qty:
+    type: integer
+  negative_adj_qty:
+    type: integer
+  transfer_qty:
+    type: integer
+  transfer_issue_qty:
+    type: integer
+  purchase_return_qty:
+    type: integer
+  sales_return_qty:
+    type: integer
+  consumption_qty:
+    type: integer

@@ -6,8 +6,10 @@ properties:
   id:
     type: string
   basic_unit:
-    $ref: ./warehouse/UnitMeasurement.v1.yaml
+    $ref: ./UnitMeasurement.v1.yaml
   derived_unit:
-    $ref: ./warehouse/UnitMeasurement.v1.yaml
+    $ref: ./UnitMeasurement.v1.yaml
   amount:
     type: number
+  remarks:
+    type: string

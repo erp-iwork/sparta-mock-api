@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+                  $ref: ../../models/Warehouse/ItemAdjJournal.v1.yaml
       operationId: get-item-adjcent-journal
       description: Get a list of item adjcent journal
     post:
@@ -31,9 +31,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/warehouse/ItemAdjJournal.v1.yaml
+                $ref: ../../models/Warehouse/ItemAdjJournal.v1.yaml
       operationId: post-item-adjcent-journal
       description: Create an item adjecent journal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Warehouse/ItemAdjJournal.v1.yaml
   '/item-adjcent-journal/{id}':
     parameters:
       - schema:

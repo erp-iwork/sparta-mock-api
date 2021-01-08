@@ -4,9 +4,17 @@ properties:
   id:
     type: string
   number:
-    type: number
+    type: string
+    enum:
+      - Item 001
+      - Item 002
+      - Item 003
   name:
     type: string
+    enum:
+      - Item 1
+      - Item 2
+      - Item 3
   category:
     $ref: ./ItemCategory.v1.yaml
   basic_unit_of_measure:
@@ -39,3 +47,7 @@ properties:
     $ref: ./Warehouse.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
+  sales_return:
+    type: integer
+  purchase_return:
+    type: integer

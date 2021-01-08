@@ -1,0 +1,21 @@
+title: Disposal
+type: object
+properties:
+  id:
+    type: string
+  document_no:
+    type: string
+  external_doc_number:
+    type: string
+  issued_by:
+    type: string
+  posting_date:
+    type: string
+  status:
+    type: string
+  remarks:
+    type: string
+  approved_date:
+    type: string
+  approved_by:
+    type: string

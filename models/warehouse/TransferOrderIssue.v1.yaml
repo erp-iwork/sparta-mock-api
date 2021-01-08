@@ -1,5 +1,6 @@
 title: TransferOrderIssue
 type: object
+description: ''
 properties:
   id:
     type: string
@@ -9,6 +10,7 @@ properties:
     type: string
   posting_date:
     type: string
+    format: date-time
   remarks:
     type: string
   sr:
@@ -17,17 +19,21 @@ properties:
     type: array
     items:
       $ref: ./TransferOrderIssueLine.v1.yaml
-  items:
-    $ref: ./TransferOrderIssueLine.v1.yaml
   approved_by:
     type: string
   approved_date:
     type: string
-  approve_status:
-    type: string
+    format: date-time
   from_warehouse:
-    $ref: ./Warehouse.v1.yaml
+    type: string
   to_warehouse:
-    $ref: ./Warehouse.v1.yaml
+    type: string
   updated_at:
+    type: string
+    format: date-time
+  status:
+    type: string
+  store_req_no:
+    type: string
+  '':
     type: string

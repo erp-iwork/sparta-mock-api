@@ -1,0 +1,14 @@
+title: VendorType
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  remarks:
+    type: string
+  lastModified:
+    type: string
+    format: date
+  code:
+    type: string

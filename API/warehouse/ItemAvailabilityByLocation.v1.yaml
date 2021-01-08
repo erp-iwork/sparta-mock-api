@@ -18,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/Item.v1.yaml
+                  $ref: ../../models/Warehouse/Item.v1.yaml
       operationId: get-item-availability-by-location
       description: Get a list of items by item availability location
   '/item-availability-by-location/{id}':

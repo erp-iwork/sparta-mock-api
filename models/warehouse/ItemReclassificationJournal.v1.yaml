@@ -6,12 +6,13 @@ properties:
   document_no:
     type: number
   posting_date:
-    type: number
+    type: string
+    format: date
   quantity:
     type: number
   remarks:
     type: string
-  new_bin_code:
+  new_bin:
     type: string
   item:
     $ref: ./Item.v1.yaml
@@ -21,3 +22,6 @@ properties:
     $ref: ./Warehouse.v1.yaml
   bin:
     $ref: ./Bin.v1.yaml
+  lastModified:
+    type: string
+    format: date

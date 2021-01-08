@@ -4,30 +4,39 @@ properties:
   id:
     type: string
   document_no:
-    type: number
+    type: string
   purchase_order_no:
-    type: number
+    type: string
   supplier_invoice_no:
-    type: number
+    type: string
   issued_by:
     type: string
   approved_by:
     type: string
   approved_date:
     type: string
+    format: date
   posting_date:
     type: string
+    format: date
   remarks:
     type: string
-  grn:
-    $ref: ./GRN.v1.yaml
+  grn_no:
+    type: string
   purchase_return_lines:
     type: array
     items:
       $ref: ./PurchaseReturnLine.v1.yaml
   approved_status:
     type: string
-  from_warehouse:
-    $ref: ./Warehouse.v1.yaml
   vendor:
-    $ref: ../Vendor.v1.yaml
+    $ref: ../Finance/Vendor.v1.yaml
+  lastModified:
+    type: string
+    format: date
+  status:
+    type: string
+    enum:
+      - Drafted
+      - Posted
+      - Approved

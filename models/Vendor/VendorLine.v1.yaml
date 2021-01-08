@@ -1,13 +1,15 @@
-title: Location
+title: VendorLine
 type: object
 properties:
   id:
-    type: string
-  code:
-    type: string
+    type: integer
   name:
     type: string
-  country:
+  telephone_number:
     type: string
-  state:
+  mobile_number:
+    type: string
+  email:
+    type: string
+  remarks:
     type: string

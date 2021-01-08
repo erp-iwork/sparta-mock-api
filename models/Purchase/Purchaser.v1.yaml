@@ -1,0 +1,14 @@
+title: Purchaser
+type: object
+properties:
+  id:
+    type: integer
+  purchase_name:
+    type: string
+  remarks:
+    type: string
+  lastModified:
+    type: string
+    format: date
+  isActive:
+    type: boolean

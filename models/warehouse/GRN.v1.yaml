@@ -15,13 +15,13 @@ properties:
     type: string
   remarks:
     type: string
-  warehouse:
-    $ref: ./Warehouse.v1.yaml
   grn_lines:
     type: array
     items:
       $ref: ./GRNLine.v1.yaml
   status:
     type: string
-  bin:
-    $ref: ./Bin.v1.yaml
+  purchase_type:
+    type: string
+  is_from_po:
+    type: string

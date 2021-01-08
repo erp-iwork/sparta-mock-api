@@ -7,7 +7,7 @@ servers:
 paths:
   /transfer-order-issues:
     get:
-      summary: get Transfer Order Issues
+      summary: Fetch All Transfer Order Issues
       tags: []
       responses:
         '200':
@@ -17,10 +17,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+                  $ref: ../../../../models/Warehouse/TransferOrderIssue.v1.yaml
       operationId: get-transfer-order-issues
     post:
-      summary: create Transfer Order Issue
+      summary: Create Transfer Order Issue
       tags: []
       responses:
         '200':
@@ -28,7 +28,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/warehouse/TransferOrderIssue.v1.yaml
+                $ref: ../../../../models/Warehouse/TransferOrderIssue.v1.yaml
         '400':
           description: Bad Request
       operationId: post-transfer-order-issues

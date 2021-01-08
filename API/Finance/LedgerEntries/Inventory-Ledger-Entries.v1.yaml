@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Inventory-Ledger-Entries
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /inventory-ledger-entries:
+    get:
+      summary: Fetch Inventory Ledger Entries
+      tags:
+        - Inventory Ledger Entries
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../../models/Finance/Ledger Entries/InventoryLedgerEntries.v1.yaml
+      operationId: get-inventory-ledger-entries
+      description: ''
+components:
+  schemas: {}

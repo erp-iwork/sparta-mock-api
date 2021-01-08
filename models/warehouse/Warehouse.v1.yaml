@@ -5,14 +5,16 @@ properties:
     type: string
   code:
     type: string
+    enum:
+      - Warehouse 1
+      - Warehouse 2
+      - Warehouse 3
   name:
     type: string
   location:
     $ref: ./Location.v1.yaml
   remarks:
     type: string
-  lastModified:
-    type: string
-    format: date
-  bin:
+  is_bin_mandatory:
     $ref: ./Bin.v1.yaml
+description: ''

@@ -1,0 +1,96 @@
+openapi: 3.0.0
+info:
+  title: Purchser
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /purchasers/:
+    get:
+      summary: Fetch all purchasers
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/Purchaser.v1.yaml
+        '':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/Purchase/Purchaser.v1.yaml
+      operationId: get-purchasers
+    post:
+      summary: Create a purchaser
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Purchaser.v1.yaml
+      operationId: post-purchasers
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/Purchaser.v1.yaml
+  '/purchasers/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Fetches a single purchaser
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Purchaser.v1.yaml
+      operationId: get-purchasers-id
+    put:
+      summary: Updates a single purchaser
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Purchaser.v1.yaml
+      operationId: put-purchasers-id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/Purchase/Purchaser.v1.yaml
+    delete:
+      summary: Removes a single purchaser
+      tags:
+        - Purchase
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/Purchase/Purchaser.v1.yaml
+      operationId: delete-purchasers-id
+components:
+  schemas: {}

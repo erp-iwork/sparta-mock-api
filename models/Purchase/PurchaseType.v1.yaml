@@ -1,11 +1,11 @@
-title: Entry Type
+title: PurchaseType
 type: object
-x-tags:
-  - Entry Type
 properties:
   id:
-    type: integer
+    type: string
   code:
     type: string
   name:
+    type: string
+  remarks:
     type: string

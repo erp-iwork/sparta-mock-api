@@ -1,0 +1,17 @@
+title: DisciplinaryAction
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  disciplinary_action_type:
+    $ref: ./Setup/DisciplinaryActionType.v1.yaml
+  from_date:
+    type: string
+    format: date
+  to_date:
+    type: string
+    format: date
+  remarks:
+    type: string

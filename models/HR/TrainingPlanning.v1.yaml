@@ -1,0 +1,19 @@
+title: TrainingPlanning
+type: object
+properties:
+  id:
+    type: string
+  training_type:
+    $ref: ./Setup/TrainingType.v1.yaml
+  start_date:
+    type: string
+    format: date
+  end_date:
+    type: string
+    format: date
+  instructor:
+    type: string
+  department:
+    $ref: ./Setup/Department.v1.yaml
+  remarks:
+    type: string

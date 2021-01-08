@@ -1,0 +1,21 @@
+title: Qualification
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  qualification_level_type:
+    $ref: ./Setup/QualificationLevelType.v1.yaml
+  education_type:
+    $ref: ./Setup/EducationType.v1.yaml
+  institute:
+    $ref: ./Setup/Institution.v1.yaml
+  start_date:
+    type: string
+  end_date:
+    type: string
+  document_file:
+    type: string
+  remarks:
+    type: string

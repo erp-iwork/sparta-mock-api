@@ -1,0 +1,21 @@
+title: Certification
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ''
+  certification_type:
+    $ref: ./Setup/CertificationType.v1.yaml
+  education_type:
+    $ref: ./Setup/EducationType.v1.yaml
+  start_date:
+    type: string
+    format: date
+  end_date:
+    type: string
+    format: date
+  document_file:
+    type: string
+  remarks:
+    type: string

@@ -1,0 +1,23 @@
+title: Experience
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  organization:
+    type: string
+  worked_position:
+    type: string
+  start_date:
+    type: string
+    format: date
+  end_date:
+    type: string
+    format: date
+  country:
+    type: string
+  city:
+    type: string
+  remarks:
+    type: string

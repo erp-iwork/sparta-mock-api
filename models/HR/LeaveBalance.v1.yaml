@@ -1,0 +1,26 @@
+title: LeaveBalance
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  leave_type:
+    $ref: ./Setup/LeaveType.v1.yaml
+  duration:
+    type: string
+  leave_request_date:
+    type: string
+    format: date
+  leave_from_date:
+    type: string
+    format: date
+  leave_to_date:
+    type: string
+    format: date
+  leave_utilized:
+    type: string
+  leave_balance:
+    type: string
+  remarks:
+    type: string

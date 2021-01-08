@@ -1,0 +1,15 @@
+title: Performance
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  goal_type:
+    $ref: ./Setup/GoalType.v1.yaml
+  evolution_result:
+    type: string
+  evaluation_date:
+    type: string
+  remarks:
+    type: string

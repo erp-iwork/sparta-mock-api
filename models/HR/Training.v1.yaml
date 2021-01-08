@@ -1,0 +1,19 @@
+title: Training
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  institute:
+    $ref: ./Setup/Institution.v1.yaml
+  training_type:
+    $ref: ./Setup/TrainingType.v1.yaml
+  start_date:
+    type: string
+    format: date
+  end_date:
+    type: string
+    format: date
+  remarks:
+    type: string

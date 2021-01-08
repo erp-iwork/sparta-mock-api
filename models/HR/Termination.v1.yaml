@@ -1,0 +1,19 @@
+title: Termination
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  termination_type:
+    $ref: ./Setup/TerminationType.v1.yaml
+  termination_request_date:
+    type: string
+    format: date
+  last_working_date:
+    type: string
+    format: date
+  case_description:
+    type: string
+  remarks:
+    type: string

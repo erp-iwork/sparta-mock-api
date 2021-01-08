@@ -1,14 +1,11 @@
-title: ItemCategory
+title: EmployeeStatus
 type: object
-description: ''
 properties:
   id:
     type: string
-  name:
-    type: string
   code:
     type: string
-  remarks:
+  name:
     type: string
-  last_modified_date:
+  remarks:
     type: string

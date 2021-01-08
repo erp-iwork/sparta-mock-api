@@ -1,0 +1,70 @@
+title: Employee
+type: object
+properties:
+  id:
+    type: string
+  employee_number:
+    type: string
+  first_name:
+    type: string
+  father_name:
+    type: string
+  grand_father_name:
+    type: string
+  employee_type:
+    type: string
+  department:
+    $ref: ./Setup/Department.v1.yaml
+  gender:
+    type: string
+  employee_start_date:
+    type: string
+    format: date
+  employee_end_date:
+    type: string
+    format: date
+  birthdate:
+    type: string
+    format: date
+  place_of_birth:
+    type: string
+  position:
+    $ref: ./Setup/Position.v1.yaml
+  position_level:
+    $ref: ./Setup/PositionLevel.v1.yaml
+  marital_status:
+    type: string
+  bank_account_number:
+    type: string
+  supervisor:
+    $ref: ./Employee.v1.yaml
+  city:
+    type: string
+  po_box:
+    type: string
+  phone_number:
+    type: string
+  home_phone_number:
+    type: string
+  emergency_contact_name:
+    type: string
+  emergency_contact_phone:
+    type: string
+  nationality:
+    type: string
+  language:
+    type: string
+  country:
+    type: string
+  region:
+    type: string
+  picture:
+    type: string
+  ID_picture:
+    type: string
+  annual_leave:
+    type: string
+  status:
+    type: string
+  remarks:
+    type: string

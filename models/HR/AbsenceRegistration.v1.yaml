@@ -1,0 +1,17 @@
+title: AbsenceRegistration
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  from_date:
+    type: string
+    format: date
+  to_date:
+    type: string
+    format: date
+  absence_reason:
+    type: string
+  remarks:
+    type: string

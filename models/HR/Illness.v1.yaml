@@ -1,0 +1,20 @@
+title: Illness
+type: object
+properties:
+  id:
+    type: string
+  employee:
+    $ref: ./Employee.v1.yaml
+  lllness_type:
+    $ref: ./Setup/IllnessType.v1.yaml
+  body_part:
+    type: string
+  incident_date:
+    type: string
+    format: date
+  case_description:
+    type: string
+  case_outcome:
+    type: string
+  remarks:
+    type: string

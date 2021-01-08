@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: LeaveBalance
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /leave-balances:
+    get:
+      summary: get all Leave Balance
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/LeaveBalance.v1.yaml
+      operationId: get-leave-balances
+    post:
+      summary: create a Leave Balance
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/LeaveBalance.v1.yaml
+      operationId: post-leave-balances
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/LeaveBalance.v1.yaml
+  '/leave-balances/{leaveBalanceId}':
+    parameters:
+      - schema:
+          type: string
+        name: leaveBalanceId
+        in: path
+        required: true
+    get:
+      summary: get a leave balance
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/LeaveBalance.v1.yaml
+      operationId: get-leave-balances-leaveBalanceId
+    put:
+      summary: update a leave balance
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/LeaveBalance.v1.yaml
+      operationId: put-leave-balances-leaveBalanceId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/LeaveBalance.v1.yaml
+    delete:
+      summary: remove a leave balance
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/LeaveBalance.v1.yaml
+      operationId: delete-leave-balances-leaveBalanceId
+components:
+  schemas: {}

@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Certification
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /certifications:
+    get:
+      summary: get all certifications
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Certification.v1.yaml
+      operationId: get-certifications
+    post:
+      summary: create a certifications
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Certification.v1.yaml
+      operationId: post-certifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Certification.v1.yaml
+  '/certifications/{certificationId}':
+    parameters:
+      - schema:
+          type: string
+        name: certificationId
+        in: path
+        required: true
+    get:
+      summary: get a certification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Certification.v1.yaml
+      operationId: get-certifications-certificationId
+    put:
+      summary: update a certification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Certification.v1.yaml
+      operationId: put-certifications-certificationId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Certification.v1.yaml
+    delete:
+      summary: remove a certification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Certification.v1.yaml
+      operationId: delete-certifications-certificationId
+components:
+  schemas: {}

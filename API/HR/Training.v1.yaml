@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Training
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /trainings:
+    get:
+      summary: get all Training
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Training.v1.yaml
+      operationId: get-trainings
+    post:
+      summary: create a Training
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Training.v1.yaml
+      operationId: post-trainings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Training.v1.yaml
+  '/trainings/{trainingId}':
+    parameters:
+      - schema:
+          type: string
+        name: trainingId
+        in: path
+        required: true
+    get:
+      summary: get a training
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Training.v1.yaml
+      operationId: get-trainings-trainingId
+    put:
+      summary: update a training
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Training.v1.yaml
+      operationId: put-trainings-trainingId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Training.v1.yaml
+    delete:
+      summary: remove a training
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Training.v1.yaml
+      operationId: delete-trainings-trainingId
+components:
+  schemas: {}

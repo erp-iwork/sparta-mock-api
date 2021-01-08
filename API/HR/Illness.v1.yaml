@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Illness
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /illnesses:
+    get:
+      summary: get all Illness
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Illness.v1.yaml
+      operationId: get-illnesses
+    post:
+      summary: create an Illness
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Illness.v1.yaml
+      operationId: post-illnesses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Illness.v1.yaml
+  '/illness/{illnessId}':
+    parameters:
+      - schema:
+          type: string
+        name: illnessId
+        in: path
+        required: true
+    get:
+      summary: get an Illness
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Illness.v1.yaml
+      operationId: get-illness-illnessId
+    put:
+      summary: update an Illness
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Illness.v1.yaml
+      operationId: put-illness-illnessId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Illness.v1.yaml
+    delete:
+      summary: remove an Illness
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Illness.v1.yaml
+      operationId: delete-illness-illnessId
+components:
+  schemas: {}

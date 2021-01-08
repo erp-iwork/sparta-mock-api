@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Qualification
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /qualifications:
+    get:
+      summary: get all Qualifications
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Qualification.v1.yaml
+      operationId: get-qualifications
+    post:
+      summary: create a Qualification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Qualification.v1.yaml
+      operationId: post-qualifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Qualification.v1.yaml
+  '/qualifications/{qualificationId}':
+    parameters:
+      - schema:
+          type: string
+        name: qualificationId
+        in: path
+        required: true
+    get:
+      summary: get a Qualification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Qualification.v1.yaml
+      operationId: get-qualifications-qualificationId
+    put:
+      summary: update a Qualification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Qualification.v1.yaml
+      operationId: put-qualifications-qualificationId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Qualification.v1.yaml
+    delete:
+      summary: remove a Qualification
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Qualification.v1.yaml
+      operationId: delete-qualifications-qualificationId
+      description: ''
+components:
+  schemas: {}

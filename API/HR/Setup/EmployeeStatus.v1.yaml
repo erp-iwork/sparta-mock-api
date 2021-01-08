@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: EmployeeStatus
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /employee-statuses:
+    get:
+      summary: get all statuses
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+      operationId: get-employee-statuses
+    post:
+      summary: create a statuses
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+      operationId: post-employee-statuses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+  '/employee-statuses/{employeeStatusId}':
+    parameters:
+      - schema:
+          type: string
+        name: employeeStatusId
+        in: path
+        required: true
+    get:
+      summary: get an employee-statuses
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+      operationId: get-employee-statuses-employeeStatusId
+    put:
+      summary: 'update an employee-statuses '
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+      operationId: put-employee-statuses-employeeStatusId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+    delete:
+      summary: remove an employee-statuses
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/EmployeeStatus.v1.yaml
+      operationId: delete-employee-statuses-employeeStatusId
+components:
+  schemas: {}

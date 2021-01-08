@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: AbsenceRegistration
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /absence-registrations:
+    get:
+      summary: get all Absence Registration
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+      operationId: get-absence-registrations
+    post:
+      summary: create an Absence Registration
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+      operationId: post-absence-registrations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+  '/absence-registrations/{absenceRegistrationId}':
+    parameters:
+      - schema:
+          type: string
+        name: absenceRegistrationId
+        in: path
+        required: true
+    get:
+      summary: get an absence-registrations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+      operationId: get-absence-registrations-absenceRegistrationId
+    put:
+      summary: update an absence-registrations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+      operationId: put-absence-registrations-absenceRegistrationId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+    delete:
+      summary: remove an absence-registrations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/AbsenceRegistration.v1.yaml
+      operationId: delete-absence-registrations-absenceRegistrationId
+components:
+  schemas: {}

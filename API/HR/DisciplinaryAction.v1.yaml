@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: DisciplinaryAction
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /disciplinary-actions:
+    post:
+      summary: create a Disciplinary Action
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+      operationId: post-disciplinary-actions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+    get:
+      summary: get all Disciplinary Action
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+      operationId: get-disciplinary-actions
+  '/disciplinary-actions/{disciplinaryActionId}':
+    parameters:
+      - schema:
+          type: string
+        name: disciplinaryActionId
+        in: path
+        required: true
+    get:
+      summary: get a Disciplinary Action
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+      operationId: get-disciplinary-actions-disciplinaryActionId
+    put:
+      summary: update a Disciplinary Action
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+      operationId: put-disciplinary-actions-disciplinaryActionId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+    delete:
+      summary: remove a Disciplinary Action
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/DisciplinaryAction.v1.yaml
+      operationId: delete-disciplinary-actions-disciplinaryActionId
+components:
+  schemas: {}

@@ -7,5 +7,3 @@ properties:
     type: string
   remarks:
     type: string
-  last_modified_date:
-    type: string

@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Termination
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /terminations:
+    get:
+      summary: get all terminations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Termination.v1.yaml
+      operationId: get-terminations
+    post:
+      summary: create a terminations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Termination.v1.yaml
+      operationId: post-terminations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Termination.v1.yaml
+  '/terminations/{terminationId}':
+    parameters:
+      - schema:
+          type: string
+        name: terminationId
+        in: path
+        required: true
+    get:
+      summary: get a terminations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Termination.v1.yaml
+      operationId: get-terminations-terminationId
+    put:
+      summary: update a terminations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Termination.v1.yaml
+      operationId: put-terminations-terminationId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Termination.v1.yaml
+    delete:
+      summary: remove a terminations
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Termination.v1.yaml
+      operationId: delete-terminations-terminationId
+components:
+  schemas: {}

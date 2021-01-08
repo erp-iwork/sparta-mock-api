@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Consignment
+  version: '1.0'
+  description: ''
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /consignments:
+    get:
+      summary: get all Consignment
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Consignment.v1.yaml
+      operationId: get-consignments
+    post:
+      summary: create a Consignment
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Consignment.v1.yaml
+      operationId: post-consignments
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Consignment.v1.yaml
+  '/consignments/{consignmentId}':
+    parameters:
+      - schema:
+          type: string
+        name: consignmentId
+        in: path
+        required: true
+    get:
+      summary: get a Consignment
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Consignment.v1.yaml
+      operationId: get-consignments-consignmentId
+    put:
+      summary: update a Consignment
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Consignment.v1.yaml
+      operationId: put-consignments-consignmentId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Consignment.v1.yaml
+    delete:
+      summary: remove a Consignment
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Consignment.v1.yaml
+      operationId: delete-consignments-consignmentId
+components:
+  schemas: {}

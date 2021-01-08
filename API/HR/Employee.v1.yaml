@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Employee
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /employees:
+    get:
+      summary: gell all employees
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Employee.v1.yaml
+      operationId: get-employees
+    post:
+      summary: create an employee
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Employee.v1.yaml
+      operationId: post-employees
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Employee.v1.yaml
+  '/employees/{empId}':
+    parameters:
+      - schema:
+          type: string
+        name: empId
+        in: path
+        required: true
+    get:
+      summary: get an employee
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Employee.v1.yaml
+      operationId: get-employees-empId
+    put:
+      summary: update an employee
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Employee.v1.yaml
+      operationId: put-employees-empId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Employee.v1.yaml
+    delete:
+      summary: remove an employe
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Employee.v1.yaml
+      operationId: delete-employees-empId
+components:
+  schemas: {}

@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Performance
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /performances:
+    get:
+      summary: get all performances
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Performance.v1.yaml
+      operationId: get-performances
+    post:
+      summary: create a performances
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Performance.v1.yaml
+      operationId: post-performances
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Performance.v1.yaml
+  '/performances/{performanceId}':
+    parameters:
+      - schema:
+          type: string
+        name: performanceId
+        in: path
+        required: true
+    get:
+      summary: get a performances
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Performance.v1.yaml
+      operationId: get-performances-performanceId
+    put:
+      summary: update a performances
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Performance.v1.yaml
+      operationId: put-performances-performanceId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Performance.v1.yaml
+    delete:
+      summary: remove a performances
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Performance.v1.yaml
+      operationId: delete-performances-performanceId
+components:
+  schemas: {}

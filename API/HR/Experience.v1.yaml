@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Experience
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /experiences:
+    get:
+      summary: get all Experiences
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../models/HR/Experience.v1.yaml
+      operationId: get-experiences
+    post:
+      summary: create an Experience
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Experience.v1.yaml
+      operationId: post-experiences
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Experience.v1.yaml
+  '/experiences/{experienceId}':
+    parameters:
+      - schema:
+          type: string
+        name: experienceId
+        in: path
+        required: true
+    get:
+      summary: get an Experience
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Experience.v1.yaml
+      operationId: get-experiences-experienceId
+    put:
+      summary: update an Experience
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Experience.v1.yaml
+      operationId: put-experiences-experienceId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../models/HR/Experience.v1.yaml
+    delete:
+      summary: remove an Experience
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../models/HR/Experience.v1.yaml
+      operationId: delete-experiences-experienceId
+components:
+  schemas: {}

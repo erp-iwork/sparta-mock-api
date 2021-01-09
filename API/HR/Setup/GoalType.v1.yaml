@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: TrainingPlanning
+  title: GoalType
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /training-plannings:
+  /goal-types:
     get:
-      summary: get all TrainingPlanning
+      summary: get all GoalType
       tags: []
       responses:
         '200':
@@ -17,10 +17,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: get-training-plannings
+                  $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+      operationId: get-goal-types
     post:
-      summary: create a TrainingPlanning
+      summary: create a GoalType
       tags: []
       responses:
         '200':
@@ -28,22 +28,22 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: post-training-plannings
+                $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+      operationId: post-goal-types
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../../models/HR/TrainingPlanning.v1.yaml
-  '/training-plannings/{trainingId}':
+              $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+  '/goal-types/{goalTypeId}':
     parameters:
       - schema:
           type: string
-        name: trainingId
+        name: goalTypeId
         in: path
         required: true
     get:
-      summary: get a training
+      summary: get a GoalType
       tags: []
       responses:
         '200':
@@ -51,10 +51,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: get-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+      operationId: get-goal-types-goalTypeId
     put:
-      summary: update a training
+      summary: update a GoalType
       tags: []
       responses:
         '200':
@@ -62,15 +62,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: put-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+      operationId: put-goal-types-goalTypeId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../../models/HR/TrainingPlanning.v1.yaml
+              $ref: ../../../models/HR/Setup/GoalType.v1.yaml
     delete:
-      summary: remove a training
+      summary: remove a GoalType
       tags: []
       responses:
         '200':
@@ -78,7 +78,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: delete-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/GoalType.v1.yaml
+      operationId: delete-goal-types-goalTypeId
 components:
   schemas: {}

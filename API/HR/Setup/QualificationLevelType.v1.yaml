@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: QualificationLevelType
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /qualification-level-types:
+    get:
+      summary: get all QualificationLevelType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+      operationId: get-qualification-level-types
+    post:
+      summary: create a QualificationLevelType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+      operationId: post-qualification-level-types
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+  '/qualification-level-types/{qualificationLevelTypeId}':
+    parameters:
+      - schema:
+          type: string
+        name: qualificationLevelTypeId
+        in: path
+        required: true
+    get:
+      summary: get a QualificationLevelType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+      operationId: get-qualification-level-types-qualificationLevelTypeId
+    put:
+      summary: update a QualificationLevelType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+      operationId: put-qualification-level-types-qualificationLevelTypeId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+    delete:
+      summary: remove a QualificationLevelType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/QualificationLevelType.v1.yaml
+      operationId: delete-qualification-level-types-qualificationLevelTypeId
+components:
+  schemas: {}

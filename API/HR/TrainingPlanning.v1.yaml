@@ -7,7 +7,7 @@ servers:
 paths:
   /training-plannings:
     get:
-      summary: get all TrainingPlanning
+      summary: get all training-plannings
       tags: []
       responses:
         '200':
@@ -20,7 +20,7 @@ paths:
                   $ref: ../../models/HR/TrainingPlanning.v1.yaml
       operationId: get-training-plannings
     post:
-      summary: create a TrainingPlanning
+      summary: create a training-plannings
       tags: []
       responses:
         '200':
@@ -35,15 +35,15 @@ paths:
           application/json:
             schema:
               $ref: ../../models/HR/TrainingPlanning.v1.yaml
-  '/training-plannings/{trainingId}':
+  '/training-plannings/{trainingPlanningId}':
     parameters:
       - schema:
           type: string
-        name: trainingId
+        name: trainingPlanningId
         in: path
         required: true
     get:
-      summary: get a training
+      summary: get a training-plannings
       tags: []
       responses:
         '200':
@@ -52,9 +52,9 @@ paths:
             application/json:
               schema:
                 $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: get-training-plannings-trainingId
+      operationId: get-training-plannings-trainingPlanningId
     put:
-      summary: update a training
+      summary: update a training-plannings
       tags: []
       responses:
         '200':
@@ -63,14 +63,14 @@ paths:
             application/json:
               schema:
                 $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: put-training-plannings-trainingId
+      operationId: put-training-plannings-trainingPlanningId
       requestBody:
         content:
           application/json:
             schema:
               $ref: ../../models/HR/TrainingPlanning.v1.yaml
     delete:
-      summary: remove a training
+      summary: remove a training-plannings
       tags: []
       responses:
         '200':
@@ -79,6 +79,6 @@ paths:
             application/json:
               schema:
                 $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: delete-training-plannings-trainingId
+      operationId: delete-training-plannings-trainingPlanningId
 components:
   schemas: {}

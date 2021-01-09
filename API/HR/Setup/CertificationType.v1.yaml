@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: TrainingPlanning
+  title: CertificationType
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /training-plannings:
+  /certification-types:
     get:
-      summary: get all TrainingPlanning
+      summary: get all CertificationType
       tags: []
       responses:
         '200':
@@ -17,10 +17,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: get-training-plannings
+                  $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+      operationId: get-certification-types
     post:
-      summary: create a TrainingPlanning
+      summary: create a CertificationType
       tags: []
       responses:
         '200':
@@ -28,22 +28,22 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: post-training-plannings
+                $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+      operationId: post-certification-types
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../../models/HR/TrainingPlanning.v1.yaml
-  '/training-plannings/{trainingId}':
+              $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+  '/certification-types/{certificationTypeId}':
     parameters:
       - schema:
           type: string
-        name: trainingId
+        name: certificationTypeId
         in: path
         required: true
     get:
-      summary: get a training
+      summary: get a CertificationType
       tags: []
       responses:
         '200':
@@ -51,10 +51,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: get-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+      operationId: get-certification-types-certificationTypeId
     put:
-      summary: update a training
+      summary: update a CertificationType
       tags: []
       responses:
         '200':
@@ -62,15 +62,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: put-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+      operationId: put-certification-types-certificationTypeId
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../../models/HR/TrainingPlanning.v1.yaml
+              $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
     delete:
-      summary: remove a training
+      summary: remove a CertificationType
       tags: []
       responses:
         '200':
@@ -78,7 +78,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../../models/HR/TrainingPlanning.v1.yaml
-      operationId: delete-training-plannings-trainingId
+                $ref: ../../../models/HR/Setup/CertificationType.v1.yaml
+      operationId: delete-certification-types-certificationTypeId
 components:
   schemas: {}

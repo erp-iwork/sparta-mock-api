@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: DisciplinaryActionType
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /disciplinary-action-types:
+    get:
+      summary: get all DisciplinaryActionType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+      operationId: get-disciplinary-action-types
+    post:
+      summary: create a DisciplinaryActionType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+      operationId: post-disciplinary-action-types
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+  '/disciplinary-action-types/{disciplinaryActionTypeId}':
+    parameters:
+      - schema:
+          type: string
+        name: disciplinaryActionTypeId
+        in: path
+        required: true
+    get:
+      summary: get a DisciplinaryActionType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+      operationId: get-disciplinary-action-types-disciplinaryActionTypeId
+    put:
+      summary: update a DisciplinaryActionType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+      operationId: put-disciplinary-action-types-disciplinaryActionTypeId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+    delete:
+      summary: remove a DisciplinaryActionType
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../../../models/HR/Setup/DisciplinaryActionType.v1.yaml
+      operationId: delete-disciplinary-action-types-disciplinaryActionTypeId
+components:
+  schemas: {}
